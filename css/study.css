@@ -1,0 +1,287 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h1,h2,h3,h4,strong{
+    font-weight: 600;
+    color: #273849;
+}
+ul,li,a{
+    text-decoration: none;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+@font-face{
+    font-family: "SourceSansProLight";
+    src: url("SourceSansProLight.ttf");
+    font-weight:bold;
+}
+@font-face{
+    font-family: "SourceSansProLight-semibold";
+    src: url("SourceSansPro-Semibold.ttf");
+    font-weight:bold;
+}
+
+body{
+    font-family:"Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    min-height: 40px;
+    margin-bottom: 0;
+    background-color: #fff;
+    left: 0;
+    width: 100%;
+}
+.container-fluid{
+    padding: 10px 60px;
+}
+.navbar-brand{
+    height: 40px;
+    padding: 10px;
+    font-size: 1.5em;
+}
+.navbar-brand>span{
+    font-size: 1.2em;
+    font-size: 30px;
+    font-family: "SourceSansProLight-semibold","SourceSansProLight";
+    color: #273849;
+    font-weight: 500;
+}
+.navbar-right2{
+    display: flex;
+    float: right;
+    line-height: 40px;
+}
+.navbar-right2>li{
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+.navbar-right2>li>a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #304455; 
+    cursor: pointer;
+}
+.navdown{
+    display: none;
+    position: absolute;
+    right: -12px;
+    border-radius: 4px;
+    background: #Fff;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+}
+.navdown li{
+    width: 170px;
+}
+.navdown li h4{
+    text-align: left;
+    display: block;
+    line-height: 28px;
+    padding: 0 24px 0 20px;
+    font-size: 16px;
+    color: #273849;
+    margin: 0;
+    font-weight: 600;
+}
+.navdown li a:hover{
+    text-decoration: none;
+    color: #42b983;
+}
+.navdown li a{
+    text-align: left;
+    display: block;
+    line-height: 28px;
+    padding: 0 24px 0 20px;
+    font-size: 16px;
+    color: #273849;
+}
+
+
+.navdown>li:nth-child(3) h4{
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid #eee;
+}
+
+.search-query{
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 0 15px 0 30px;
+    border: 1px solid #e3e3e3;
+    color: #273849;
+    outline: none;
+    border-radius: 15px;
+    margin-right: 10px;
+    transition: border-color 0.2s ease;
+    background: #fff url('../img/search.png') 8px 5px no-repeat;
+    background-size: 20px;
+    vertical-align: middle !important;
+}
+.arrow{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 3px;
+    margin-right: -14px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #4f5959;
+}
+
+/* 主要部分 */
+.main{
+    position: relative;
+    top: 60px;
+    padding: 0 60px 30px;
+    overflow-x: hidden;
+}
+.LeftNav{
+    position: fixed;
+    top: 61px;
+    left: 0;
+    bottom: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.LeftNavMenu{
+
+    padding: 70px 0px 60px 20px;
+}
+.LeftNavList{
+    width: 260px;
+}
+.specialSponsor{
+    margin-top: -10px;
+}
+.SSinner span{
+    color: #4f5959;
+}
+.SSinner>div>a{
+    text-decoration: none;
+    width: 200px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+}
+.SSinner>div>a>img{
+    width: 200px; 
+}
+.specialSponsor>h2{
+    font-size: 25px;
+    font-weight: 600;
+    color: #273849;
+    margin-top: 5px;
+    font-family: "SourceSansProLight-semibold",Arial, sans-serif;
+}
+
+
+
+.menuRoot{
+    margin: 0;
+    line-height: 1.5em;
+}
+.menuRoot ul{
+    padding-left: 16px;
+}
+.menuRoot li{
+    margin-top: 8px;
+    line-height: 24px;
+}
+.menuRoot h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 19px 0 19px 0;
+    line-height: 24px;
+}
+.LeftNav-current{
+    font-size: 16px;
+    font-weight: 600;
+    color: #42b983;
+}
+.menuSub{
+    display: none;
+}
+.menuSub li a{
+    text-decoration: none;
+    color: #304455;
+    font-size: 16px;
+    font-family: "SourceSansProLight-semibold";
+}
+
+/* 主要部分 */
+.content{
+    position: relative;
+    padding: 35px 0 0 50px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+.introduce{
+    margin: 0;
+    font-family: "SourceSansProLight-semibold";
+    font-weight: 600;
+    color: #273849;
+    margin-bottom: 32px;
+    line-height: 43px;
+}
+.whatIsVue{
+    font-size: 25px;
+    padding-bottom: 17px;
+    margin-top: 45px;
+    margin-bottom: 19px;
+    border-bottom: 1px solid #ddd;
+}
+.content h2::before{
+    content: "";
+    height: 91px;
+    margin-top: -91px;
+    display: block;
+}
+.content .whatIsVue a{
+    color: #273849;
+}
+.content p{
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 17px;
+    margin-bottom: -17px;
+    padding-bottom: 17px;
+    position: relative;
+    z-index: 1;
+    word-spacing: 0.05em;
+    font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+}
+.content a{
+    color: #42b983;
+    font-weight: 600;
+    text-decoration: none;
+}
+.content .tip{
+    padding: 12px 24px 12px 30px;
+    background-color: #f8f8f8;
+    border-left: 4px solid;
+    border-left-color: #f66;
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    margin: 32px 0;
+}
+.content a.button{
+    width: 200px;
+    padding: 12px 24px;
+    border-radius: 50px;
+    background: #42b983;
+    font-size: 14px;
+    color: #Fff;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}

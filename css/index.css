@@ -1,0 +1,438 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+ul,li,a{
+    text-decoration: none;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+@font-face{
+    font-family: "SourceSansProLight";
+    src: url("SourceSansProLight.ttf");
+    font-weight:bold;
+}
+@font-face{
+    font-family: "SourceSansProLight-semibold";
+    src: url("SourceSansPro-Semibold.ttf");
+    font-weight:bold;
+}
+
+body{
+    font-family:"SourceSansProLight-semibold",Arial, sans-serif;
+}
+.navbar{
+    min-height: 40px;
+    margin-bottom: 0;
+    background-color: #fff;
+    border-color: #fff;
+}
+.container-fluid{
+    padding: 10px 60px;
+}
+.navbar-brand{
+    height: 40px;
+    padding: 10px;
+    font-size: 1.5em;
+}
+.navbar-brand>span{
+    font-size: 1.2em;
+    font-size: 30px;
+    font-family: "SourceSansProLight-semibold","SourceSansProLight";
+    color: #273849;
+    font-weight: 500;
+}
+.navbar-right2{
+    display: flex;
+    float: right;
+    line-height: 40px;
+}
+.navbar-right2>li{
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+.navbar-right2>li>a{
+    font-size: 16px;
+    text-decoration: none;
+    color: #304455; 
+    cursor: pointer;
+}
+.navdown{
+    display: none;
+    position: absolute;
+    right: -12px;
+    border-radius: 4px;
+    background: #Fff;
+    padding: 10px 0;
+    border: 1px solid #ddd;
+}
+.navdown li{
+    width: 170px;
+}
+.navdown li h4{
+    text-align: left;
+    display: block;
+    line-height: 28px;
+    padding: 0 24px 0 20px;
+    font-size: 16px;
+    color: #273849;
+    margin: 0;
+    font-weight: 600;
+}
+.navdown li a:hover{
+    text-decoration: none;
+    color: #42b983;
+}
+.navdown li a{
+    text-align: left;
+    display: block;
+    line-height: 28px;
+    padding: 0 24px 0 20px;
+    font-size: 16px;
+    color: #273849;
+}
+
+
+.navdown>li:nth-child(3) h4{
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid #eee;
+}
+
+.search-query{
+    height: 30px;
+    line-height: 30px;
+    box-sizing: border-box;
+    padding: 0 15px 0 30px;
+    border: 1px solid #e3e3e3;
+    color: #273849;
+    outline: none;
+    border-radius: 15px;
+    margin-right: 10px;
+    transition: border-color 0.2s ease;
+    background: #fff url('../img/search.png') 8px 5px no-repeat;
+    background-size: 20px;
+    vertical-align: middle !important;
+}
+.arrow{
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+    margin-left: 3px;
+    margin-right: -14px;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid #4f5959;
+}
+
+/* 第二部分 */
+.bigLogo{
+    padding: 40px 40px 30px;
+    background: #fff;
+}
+.bigLogoinner{
+    max-width: 1260px;
+    margin: 0 auto;
+}
+.Llogo{
+    width: 39%;
+    display: inline-block;
+    vertical-align: top;
+}
+.Llogo>img{
+    width: 215px;
+    height: 215px;
+    float: right;
+    margin-right: 60px;
+}
+.Rtext{
+    width: 60%;
+    display: inline-block;
+    vertical-align: top;
+}
+.Rtext>h1{
+    font-size: 3.2em;
+    font-weight: 300;
+    margin: 0;
+    line-height: 68px;
+}
+.Rtext>p{
+    word-spacing: 0.05em;
+    display: block;
+    margin: 16px 0;
+}
+.Rtext-p-a1{
+    margin: 17px 0;
+    width: 207px;
+    height: 50px;
+    line-height: 50px;
+    list-style: none;
+    min-width: 8em;
+    color: #Fff;
+    border-radius: 50px;
+    background: #4fc08d;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-right: 8px;
+    box-sizing: border-box;
+}
+.Rtext-p-a1:hover{
+    text-decoration: none;
+    color: #fff
+}
+.Rtext-p-a2{
+    width: 134px;
+    font-size: 18px;
+    padding: 0.65em 2em;
+    border-radius: 2em;
+    border: 1px solid #4fc08d;
+    display: inline-block;
+    text-align: center;
+    color: #4fc08d;
+    letter-spacing: 0.1em;
+    font-weight: 1000;
+    box-sizing: border-box;
+    margin-right: 8px;
+}
+.Rtext-p-a2:hover{
+    text-decoration: none;
+    color: #4fc08d
+}
+.Rtext-p-a3{
+    letter-spacing: 0.1em;
+    font-size: 18px;
+    padding: 0.65em 2em;
+    display: inline-block;
+    background: #f6f6f6;
+    border-radius: 2em;
+    color: #4f5959;
+    position: relative;
+    box-sizing: border-box;
+}
+.special-sponsor{
+    text-align: center;
+    position: relative;
+    display: block;
+    padding-bottom: 30px;
+}
+.special-sponsor>h3{
+    margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    color: #273849;
+    display: block;
+    text-align: center;
+}
+.special-sponsor a{
+    display: inline-block;
+    color: #4f5959;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.special-sponsor .special-sponsor-a3{
+    width: 125px;
+    border: 1px solid #42b983;
+    border-radius: 50px;
+    display: inline-block;
+    padding: 4px;
+    margin: 20px 0 0;
+    text-align: center;
+    color: #42b983;
+    font-size: 12px;
+}
+
+
+
+/* 第三部分 */
+.specialPoint{
+    padding-bottom: 70px;
+}
+.SPinner{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.Point{
+    display: inline-block;
+    padding: 0 32px;
+    box-sizing: border-box;
+}
+.Point h2{
+    color: #42b983;
+    line-height: 32px;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 0;
+    padding: 12px 0;
+}
+.Point p{
+    text-align: center;
+    word-spacing: 0.05em;
+    margin: 16px 0;
+    color: #4f5959;
+    font-size: 16px;
+}
+
+/* 第四部分 */
+.sponsors{
+    text-align: center;
+    padding: 35px 40px 45px;
+    background-color: #f6f6f6;
+}
+.innerSponsors{
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 700px;
+}
+.innerSponsors>h3{
+    color: #999;
+    margin: 0 0 10px;
+    font-weight: 600;
+    text-align: center;
+    font-size: 20px;
+}
+.innerSponsors a{
+    display: inline-block;
+    vertical-align: middle;
+    margin: 20px 15px 0;
+    position: relative;
+}
+.innerSponsors a img{
+    display: inline-block;
+    vertical-align: middle;
+    filter: grayscale(100%);
+    opacity: 0.66;
+    transition: all 0.3s ease;
+}
+.innerSponsors .becomeSponsors{
+    margin-top: 40px;
+    font-size: 14px;
+    width: auto;
+    padding: 0.65em 2em;
+    border-radius: 50px;;
+    box-sizing: border-box;
+    border: 1px solid #42b983;
+    color: #42b983;
+    font-weight: 700;
+}
+.becomeSponsors:hover{
+    text-decoration: none;
+    color: #42b983;
+}
+.OpenCollectiveSponsors{
+    margin-top: 60px;
+    text-align: center;
+}
+.OpenCollectiveSponsors h3{
+    color: #999;
+    margin: 0 0 10px;
+    font-weight: 600;
+    font-size: 20px;
+}
+.OpenCollectiveSponsors h4{
+    margin-top: 21px;
+    color: #999;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.OpenCollectiveSponsors a{
+    width: auto;
+    max-width: 100px;
+    max-height: 60px;
+}
+.OpenCollectiveSponsors a img{
+    width: auto;
+    max-width: 100px;
+    max-height: 60px;
+    transition: all 0.3s ease;
+    display: inline-block;
+    line-height: 33px;
+    vertical-align: middle;
+}
+
+/* 第五部分 */
+.News{
+    background: #fff;
+    width: 100%;
+    text-align: center;
+    display: block;
+    padding: 40px 20px 70px;
+}
+.Newsinner{
+    margin: 0 auto;
+    max-width: 1260px;
+}
+.Newsinner form{
+    position: relative;
+    max-width: 550px;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+.Newsinner form input{
+    width: 100%;
+    height: 50px;
+    padding: 10px 80px 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #42b983;
+    font-size: 16px;
+    outline: none;
+}
+.Newsinner form a{
+    width: 134px;
+    height: 42px;
+    position: absolute;
+    border-radius: 50px;
+    top: 4px;
+    right: 4px;
+    background: #42b983;
+    border-color: #42b983;
+}
+.Newsinner p{
+    margin-top: 10px;
+    word-spacing: 0.05em;
+    font-size: 16px;
+}
+.Newsinner p a{
+    color: #42b983;
+}
+.Newsinner p a:hover{
+    text-decoration: none;
+    color: #42b983;
+}
+
+
+/* 底部 */
+.footer{
+    padding: 40px 0;
+    background:rgb(71, 80, 80);
+}
+.footer p{
+    word-spacing: 0.05em;
+    text-align: center;
+    margin: 16px 0;
+    font-size: 16px;
+    color: #Fff;
+}
+.footer p:first-child a{
+    margin: 0 5px;
+}
+.footer p:first-child a svg{
+    width: 18px;
+    height: 18px;
+}
+.footer p:last-child a{
+    color: #fff;
+}
+.footer p:last-child a:hover{
+    color: #fff;
+    text-decoration: none;
+}
