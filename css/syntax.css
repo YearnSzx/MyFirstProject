@@ -1,0 +1,21 @@
+.demo p{
+    margin: 0;
+    padding: 0;
+}
+blockquote{
+    margin: 32px 0;
+    padding: 0;
+    padding-left: 20px;
+
+    border-left: 4px solid #42b983;
+}
+.content blockquote p{
+    margin: 0;
+    padding: 0;
+}
+.guild-link{
+    justify-content: space-between;
+}
+pre code{
+    color: #707070;
+}
