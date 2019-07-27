@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/public.css">
     <link rel="stylesheet" href="css/syntax.css">
+    <link rel="stylesheet" href="css/computed.css">
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
 <body>
@@ -214,15 +215,16 @@
                                 </div>
                             </div>
 
-                            <h2>
+                            <h2 style="display: inline-block;">
                                 教程
-                                <select class="versionSelect">
-                                    <option value="SELF">2.x</option>
-                                    <option value="v1">1.0</option>
-                                    <option value="012">0.12</option>
-                                    <option value="011">0.11</option>
-                                </select>
+                                
                             </h2>
+                            <select class="versionSelect">
+                                <option value="SELF">2.x</option>
+                                <option value="v1">1.0</option>
+                                <option value="012">0.12</option>
+                                <option value="011">0.11</option>
+                            </select>
                             
                             <ul class="menuRoot">
                                 <li>
@@ -307,14 +309,14 @@
                                 <li>
                                     <a href="computed.html" class="LeftNav-current" style="color: #42b983;font-weight: 600;">计算属性和侦听器</a>
                                     <ul class="menuSub" style="display: block;">
-                                        <li><a href="#">计算属性</a></li>
+                                        <li><a href="javascript:;" name="CAttributes" class="CAttributes">计算属性</a></li>
                                         <ul>
-                                            <li><a href="#">基础例子</a></li>
-                                            <li><a href="#">计算属性缓存 vs 方法</a></li>
-                                            <li><a href="#">计算属性 vs 侦听属性</a></li>
-                                            <li><a href="#">计算属性的 setter</a></li>
+                                            <li><a href="javascript:;" name="BExamples" class="BExamples">基础例子</a></li>
+                                            <li><a href="javascript:;" name="CacheMethod" class="CacheMethod">计算属性缓存 vs 方法</a></li>
+                                            <li><a href="javascript:;" name="ComputationalListening" class="ComputationalListening">计算属性 vs 侦听属性</a></li>
+                                            <li><a href="javascript:;" name="SetterForAlculating" class="SetterForAlculating">计算属性的 setter</a></li>
                                         </ul>
-                                        <li><a href="#">侦听器</a></li>
+                                        <li><a href="javascript:;" name="Listener" class="Listener">侦听器</a></li>
                                     </ul>
                                 </li>
                                 <!-- Class 与 Style 绑定 -->
@@ -1016,8 +1018,8 @@
 
             <div class="content">
                 <h1>计算属性和侦听器</h1>
-                <h2>
-                    <a href="#">计算属性</a>
+                <h2 id="CAttributes">
+                    <a href="javascript:;">计算属性</a>
                 </h2>
                 <p>
                     模板内的表达式非常便利，但是设
@@ -1035,8 +1037,8 @@
                 <p>
                     所以，对于任何复杂逻辑，你都应当使用<strong>计算属性</strong>。
                 </p>
-                <h3>
-                    <a href="#">基础例子</a>
+                <h3 id="BExamples">
+                    <a href="javascript:;">基础例子</a>
                 </h3>
 <pre><code><span class="preCodeSpanBlue">&lt;div id=</span><span class="preCodeSpanGreen">"example"</span><span class="preCodeSpanBlue">&gt;</span>
   <span class="preCodeSpanBlue">&lt;p&gt;</span>Original message: "{{ message }}"<span class="preCodeSpanBlue">&lt;/p&gt;</span>
@@ -1072,8 +1074,8 @@ vm.message = <span class="preCodeSpanGreen">'Goodbye'</span>
                     的 getter 函数是没有副作用 (side effect) 的，这使它更易于测试和理解。
                 </p>
 
-                <h3>
-                    <a href="#">计算属性缓存 vs 方法</a>
+                <h3 id="CacheMethod">
+                    <a href="javascript:;">计算属性缓存 vs 方法</a>
                 </h3>
                 <p>你可能已经注意到我们可以通过在表达式中调用方法来达到同样的效果：</p>
 <pre><code><span class="preCodeSpanBlue">&lt;p&gt;</span>Reversed message: "{{ reversedMessage() }}"<span class="preCodeSpanBlue">&lt;/p&gt;</span></code></pre>
@@ -1107,8 +1109,8 @@ methods: {
                     用方法来替代。
                 </p>
 
-                <h3>
-                    <a href="#">计算属性 vs 侦听属性</a>
+                <h3 id="ComputationalListening">
+                    <a href="javascript:;">计算属性 vs 侦听属性</a>
                 </h3>
                 <p>
                     Vue 提供了一种更通用的方式来观察和响应 Vue 实例上的数据变动：<strong>侦听属性</strong>。当你有一些
@@ -1149,8 +1151,8 @@ methods: {
 })</code></pre>
                 <p>好得多了，不是吗？</p>
 
-                <h3>
-                    <a href="#">计算属性的 setter</a>
+                <h3 id="SetterForAlculating">
+                    <a href="javascript:;">计算属性的 setter</a>
                 </h3>
                 <p>
                     计算属性默认只有 getter ，不过在需要时你也可以提供一个 setter ：
@@ -1180,8 +1182,8 @@ computed: {
 
 
 
-                <h2>
-                    <a href="#">侦听器</a>
+                <h2 id="Listener">
+                    <a href="javascript:;">侦听器</a>
                 </h2>
                 <p>
                     虽然计算属性在大多数情况下更合适，但有时也需要一个自定义
@@ -1288,23 +1290,6 @@ computed: {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
          <div class="TXnext">
             <span>广告</span>
             <a href="#">
@@ -1319,6 +1304,40 @@ computed: {
             }).mouseleave(function(){
                 $(this).children('ul').hide();
             })
+            $('.content h2').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+
+            var arr = [CAttributes,BExamples,CacheMethod,ComputationalListening,SetterForAlculating,Listener]
+            
+            // var a = $('.menuRoot>li:nth-child(6) .menuSub a');
+            for(var i =0;i<arr.length;i++){
+                console.log(arr[i].id)
+            }
+            $(window).scroll(function () {//为页面添加页面滚动监听事件
+                var wst = $(window).scrollTop(); //滚动条距离顶端值  
+                for (var i = 0; i < arr.length; i++) {  //加循环
+                    if ($("#" + arr[i].id).offset().top <= wst +10 ){ //判断滚动条位置
+                        $('.menuSub a').removeClass('active')
+                        $("." + arr[i].id).addClass("active");
+                    }
+                }
+            });
+            $('.content h3').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+            $('.menuSub a').click(function(){
+                
+                $('.menuSub a').removeClass('active')
+                setTimeout(function(){
+                    $(this).addClass('active');
+                },500)
+                $('html').animate({scrollTop: $("#" + this.name).offset().top}, 500);
+            })
+     
+            
         </script>
 </body>
 </html>
