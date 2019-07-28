@@ -17,6 +17,7 @@
             <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
+                    <img src="img/logoHpage.png" alt="">
                     <span>Vue.js</span>
                 </a>
             </div>
@@ -1335,8 +1336,30 @@ computed: {
                 },500)
                 $('html').animate({scrollTop: $("#" + this.name).offset().top}, 500);
             })
-     
+
+            $(window).resize(function () {
+                var screenWidth = $(window).width();//浏览器当前窗口可视区域宽度
+                if(screenWidth>1300){
+                    reductionContent()
+                }else if(screenWidth<1300){
+                    changeContent()
+                }
+            })
             
+            function reductionContent(){
+                $('.content').css({
+                    'padding': '35px 0 0 50px',
+                    'margin-left': 'auto'
+                })
+            }
+
+            function changeContent(){
+                $('.content').css({
+                    'padding': '35px 0',
+                    'padding-left': '50px',
+                    'margin-left': '290px'
+                })
+            }
         </script>
 </body>
 </html>
