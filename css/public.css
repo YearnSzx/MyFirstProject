@@ -27,6 +27,10 @@ ul,li,a{
 body{
     font-family:"Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
 }
+.active{
+    font-weight: 600;
+    color: #42b983 !important;
+}
 .minibar{
     position: fixed;
     top: 0;

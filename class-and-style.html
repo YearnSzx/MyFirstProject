@@ -14,9 +14,14 @@
 <body>
     
         <nav class="navbar navbar-default">
+            <div class="minibar" style="display: none;">
+                <a href="javascript:;" class="menu-btn"></a>
+                <a href="javascript:;" class="Hlogo"></a>
+            </div>
             <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
+                    <img src="img/logoHpage.png" alt="">
                     <span>Vue.js</span>
                 </a>
             </div>
@@ -214,15 +219,13 @@
                                 </div>
                             </div>
 
-                            <h2>
-                                教程
-                                <select class="versionSelect">
+                            <h2>教程</h2>
+                            <select class="versionSelect">
                                     <option value="SELF">2.x</option>
                                     <option value="v1">1.0</option>
                                     <option value="012">0.12</option>
                                     <option value="011">0.11</option>
                                 </select>
-                            </h2>
                             
                             <ul class="menuRoot">
                                 <li>
@@ -305,8 +308,8 @@
                                 </li>
                                 <!-- 计算属性和侦听器 -->
                                 <li>
-                                    <a href="computed.html" class="LeftNav-current" style="color: #42b983;font-weight: 600;">计算属性和侦听器</a>
-                                    <ul class="menuSub" style="display: block;">
+                                    <a href="computed.html" class="LeftNav-current">计算属性和侦听器</a>
+                                    <ul class="menuSub">
                                         <li><a href="#">计算属性</a></li>
                                         <ul>
                                             <li><a href="#">基础例子</a></li>
@@ -319,20 +322,20 @@
                                 </li>
                                 <!-- Class 与 Style 绑定 -->
                                 <li>
-                                    <a href="#" class="LeftNav-current"> Class 与 Style 绑定</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">绑定 HTML Class</a></li>
+                                    <a href="#" class="LeftNav-current" style="color: #42b983;font-weight: 600;"> Class 与 Style 绑定</a>
+                                    <ul class="menuSub" style="display: block;">
+                                        <li><a href="javascript:;" class="BindingHTMLClass" name="BindingHTMLClass">绑定 HTML Class</a></li>
                                         <ul>
-                                            <li><a href="#">对象语法</a></li>
-                                            <li><a href="#">数组语法</a></li>
-                                            <li><a href="#">用在组件上</a></li>
+                                            <li><a href="javascript:;" class="ObjectGrammar" name="ObjectGrammar">对象语法</a></li>
+                                            <li><a href="javascript:;" class="ArrayGrammar" name="ArrayGrammar">数组语法</a></li>
+                                            <li><a href="javascript:;" class="UsedOnComponents" name="UsedOnComponents">用在组件上</a></li>
                                         </ul>
-                                        <li><a href="#">绑定内联样式</a></li>
+                                        <li><a href="javascript:;" class="BindingInlineStyles" name="BindingInlineStyles">绑定内联样式</a></li>
                                         <ul>
-                                            <li><a href="#">对象语法</a></li>
-                                            <li><a href="#">数组语法</a></li>
-                                            <li><a href="#">自动添加前缀</a></li>
-                                            <li><a href="#">多重值</a></li>
+                                            <li><a href="javascript:;" class="ObjectGrammar2" name="ObjectGrammar2">对象语法</a></li>
+                                            <li><a href="javascript:;" class="ArrayGrammar2" name="ArrayGrammar2">数组语法</a></li>
+                                            <li><a href="javascript:;" class="AddingPrefixes" name="AddingPrefixes">自动添加前缀</a></li>
+                                            <li><a href="javascript:;" class="MultipleValues" name="MultipleValues">多重值</a></li>
                                         </ul>
                                     </ul>
                                 </li>
@@ -1015,6 +1018,12 @@
 
 
             <div class="content">
+                <div class="TXnext">
+                    <span>广告</span>
+                    <a href="#">
+                        <img src="img/TXnext.png" alt="">
+                    </a>
+                </div>
                 <h1>Class 与 Style 绑定</h1>
                 <p>
                     操作元素的 class 列表和内联样式是数据绑定的一个常见需
@@ -1024,13 +1033,13 @@
                     做了专门的增强。表达式结果的类型除了字符串之外，还可以是
                     对象或数组。 
                 </p>
-                <h2>
+                <h2 id="BindingHTMLClass">
                     <a href="#">绑定 HTML Class</a>
                 </h2>
                 <div class="Content-Scrimba">
                     <a href="#">Watch a free lesson on Vue School</a>
                 </div>
-                <h3>
+                <h3 id="ObjectGrammar">
                     <a href="#">对象语法</a>
                 </h3>
                 <p>我们可以传给 <code>v-bind:class</code> 一个对象，以动态地切换 class：</p>
@@ -1084,7 +1093,7 @@ computed: {
   }
 }</code></pre>
 
-                <h3>
+                <h3 id="ArrayGrammar">
                     <a href="#">数组语法</a>
                 </h3>
                 <p>我们可以把一个数组传给 <a href="#">v-bind:class</a>，以应用一个 class 列表：</p>
@@ -1103,7 +1112,7 @@ computed: {
 
 
 
-                <h3>
+                <h3 id="UsedOnComponents">
                     <a href="#">用在组件上</a>
                 </h3>
                 <blockquote>
@@ -1121,25 +1130,89 @@ computed: {
                 <p>然后在使用它的时候添加一些 class：</p>
 <pre><code><span class="preCodeSpanBlue">&lt;my-component class=</span><span class="preCodeSpanGreen">"baz boo"</span><span class="preCodeSpanBlue">&gt;&lt;/my-component&gt;</span></code></pre>
                 <p>HTML 将被渲染为:</p>
-<pre><code><span class="preCodeSpanBlue">&lt;my-component class=</span><span class="preCodeSpanGreen">"baz boo"</span><span class="preCodeSpanBlue">&gt;&lt;/my-component&gt;</span></code></pre>
+<pre><code><span class="preCodeSpanBlue">&lt;p class=</span><span class="preCodeSpanGreen">"foo bar baz boo"</span><span class="preCodeSpanBlue">&gt;</span>Hi<span class="preCodeSpanBlue">&lt;/p&gt;</span></code></pre>
+                <p>对于带数据绑定 class 也同样适用：</p>
+<pre><code><span class="preCodeSpanBlue">&lt;my-component v-bind:class=</span><span class="preCodeSpanGreen">"{ active: isActive }"</span><span class="preCodeSpanBlue">&gt;&lt;/my-component&gt;</span></code></pre>
+                <p>当 <code>isActive</code> 为 truthy<sup>[1]</sup>时，HTML 将被渲染成为：</p>
+<pre><code><span class="preCodeSpanBlue">&lt;p class=</span><span class="preCodeSpanGreen">"foo bar active"</span><span class="preCodeSpanBlue">&gt;</span>Hi<span class="preCodeSpanBlue">&lt;/p&gt;</span></code></pre>
 
 
 
+                <h2 id="BindingInlineStyles">绑定内联样式</h2>
+                <h3 id="ObjectGrammar2">
+                    <a href="#">对象语法</a>
+                </h3>
+                <p>
+                    <code>v-bind:style</code> 的对象语法十分直观——看着非常像 CSS，但其实是一
+                    个 JavaScript 对象。CSS 属性名可以用驼峰式 (camelCase) 或短
+                    横线分隔 (kebab-case，记得用引号括起来) 来命名：
+                </p>
+<pre><code><span class="preCodeSpanBlue">&lt;div v-bind:style=</span><span class="preCodeSpanGreen">"{ color: activeColor, fontSize: fontSize + 'px' }"</span><span class="preCodeSpanBlue">&gt;&lt;/div&gt;</span></code></pre>
+<pre><code>data: {
+  activeColor: <span class="preCodeSpanGreen">'red'</span>,
+  fontSize: <span class="preCodeSpanViolet">30</span>
+}</code></pre>
+                <p>直接绑定到一个样式对象通常更好，这会让模板更清晰：</p>
+<pre><code><span class="preCodeSpanBlue">&lt;div v-bind:style=</span><span class="preCodeSpanGreen">"styleObject"</span><span class="preCodeSpanBlue">&gt;&lt;/div&gt;</span></code></pre>
+<pre><code>data: {
+  styleObject: {
+    color: <span class="preCodeSpanGreen">'red'</span>,
+    fontSize: <span class="preCodeSpanGreen">'13px'</span>
+  }
+}</code></pre>
+                <p>同样的，对象语法常常结合返回对象的计算属性使用。</p>
+
+
+                <h3 id="ArrayGrammar2">
+                    <a href="#">数组语法</a>
+                </h3>
+                <p>
+                    <code>v-bind:style</code> 的数组语法可以将多个样式对象应用到同一个元素上：
+                </p>
+<pre><code><span class="preCodeSpanBlue">&lt;div v-bind:style=</span><span class="preCodeSpanGreen">"[baseStyles, overridingStyles]"</span><span class="preCodeSpanBlue">&gt;&lt;/div&gt;</span></code></pre>
+
+                <h3 id="AddingPrefixes">
+                    <a href="#">自动添加前缀</a>
+                </h3>
+                <p>
+                    当 <code>v-bind:style</code> 使用需要添加<a href="#">浏览器引擎前缀</a>的 CSS 属性时，如 <code>transform</code>，Vue.js 会自动侦测并添加相应的前缀。
+                </p>
 
 
 
+                <h3 id="MultipleValues">
+                    <a href="#">多重值</a>
+                </h3>
+                <blockquote>
+                    <p>2.3.0+</p>
+                </blockquote>
+                <p>从 2.3.0 起你可以为 <code>style</code> 绑定中的属性提供一个包含多个值的数组，常用于提供多个带前缀的值，例如：</p>
+<pre><code><span class="preCodeSpanBlue">&lt;div :style=</span><span class="preCodeSpanGreen">"{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }"</span><span class="preCodeSpanBlue">&gt;&lt;/div&gt;</span></code></pre>
+                <p>这样写只会渲染数组中最后一个被浏览器支持的值。在本例中，如果浏览器支持不带浏览器前缀的 flexbox，那么就只会渲染 <code>display: flex</code>。</p>
+                <p>
+                    <small>
+                        <br>
+                        <strong>译者注</strong>
+                        <br>
+                        [1] truthy 不是 <code>true</code>，详见 <a href="#">MDN</a> 的解释。
+                    </small>
+                </p>
 
 
 
+                <div class="guild-link">
+                        <span>
+                             ← <a href="#">计算属性和侦听器</a>
+                        </span>
+                        <span>
+                            <a href="#">条件渲染 </a> →
+                        </span>
+                    </div>
 
 
-
-
-
-
-
-
-
+                <footer>
+                        发现错误？想参与编辑？<a href="#">在 GitHub 上编辑此页！</a> 
+                </footer>
 
 
 
@@ -1176,13 +1249,6 @@ computed: {
 
 
 
-
-        <div class="TXnext">
-            <span>广告</span>
-            <a href="#">
-                <img src="img/TXnext.png" alt="">
-            </a>
-        </div>
         <script src="js/jquery-1.12.4.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script>
@@ -1191,6 +1257,191 @@ computed: {
             }).mouseleave(function(){
                 $(this).children('ul').hide();
             })
+            $('.content h2').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+
+            var arr = [BindingHTMLClass,ObjectGrammar,ArrayGrammar,UsedOnComponents,
+            BindingInlineStyles,ObjectGrammar2,ArrayGrammar2,AddingPrefixes,MultipleValues]
+            
+            // var a = $('.menuRoot>li:nth-child(6) .menuSub a');
+            for(var i =0;i<arr.length;i++){
+                console.log(arr[i].id)
+            }
+            $(window).scroll(function () {//为页面添加页面滚动监听事件
+                var wst = $(window).scrollTop(); //滚动条距离顶端值  
+                for (var i = 0; i < arr.length; i++) {  //加循环
+                    if ($("#" + arr[i].id).offset().top <= wst +10 ){ //判断滚动条位置
+                        $('.menuSub a').removeClass('active')
+                        $("." + arr[i].id).addClass("active");
+                    }
+                }
+            });
+            $('.content h3').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+            $('.menuSub a').click(function(){
+                $('.menuSub a').removeClass('active')
+                setTimeout(function(){
+                    $(this).addClass('active');
+                },500) //在延迟后为左边导航栏a添加class
+                console.log($("#" + this.name))
+                $('html').animate({scrollTop: $("#" + this.name).offset().top}, 500);//添加滑动效果
+            })
+
+            //要添加一个页面刚打开就分析页面宽度的计时器
+            var StartOpen = setTimeout(() => {
+                let screenWidth = $(window).width();
+                if(screenWidth<900){//小于900px时的变化
+                    changeWindowWidth()
+                }else if(screenWidth<1300 && screenWidth>900){//大于900且小于1300时的样式
+                    reductionContent()
+                }else{
+                    reductionContent()
+                    Contentreduction()
+                }
+            }, 10);
+
+
+
+
+
+            $(window).resize(function () {
+                var screenWidth = $(window).width();//浏览器当前窗口可视区域宽度
+                if(screenWidth<900){
+                    changeWindowWidth()
+                }else if(screenWidth<1300 && screenWidth>900){
+                    reductionContent()
+                }else{
+                    reductionContent()
+                    Contentreduction()
+                }
+            })
+            //屏幕小于900px的变化
+            function changeWindowWidth(){
+                $('.container-fluid').css({
+                    'display':'none'
+                })
+                $('.minibar').css({
+                    'display':'block'
+                })
+                $('.LeftNav').css('display','none')
+                $('.main').css({
+                    'position':'static',
+                    'padding': '2em 1.4em 0'
+                })
+                //content的改变
+                $('.content').css({
+                    'padding': '0',
+                    'margin-left': '0',
+                    'padding':'2.2em 0'
+                })
+                $('.content h1').css({
+                    'font-size':'2em'
+                })
+                $('.content h2').css({
+                    'font-size':'1.5em'
+                })
+                $('.content h3').css({
+                    'font-size':'1.17em'
+                })
+                $('.content p').css({
+                    'font-size':'14px'
+                })
+                $('.content h3>a::before').css({
+                    'left':'-20px'
+                })
+                $('.guild-link span a').css({
+                    'font-size':'14px'
+                })
+                $('footer').css({
+                    'font-size':'14px',
+                    'text-align':'center'
+                })
+                //广告的改变
+                $('.TXnext').css({
+                    'position': 'relative',
+                    'float': 'right',
+                    'background-color': '#fff',
+                    'right': 0,
+                    'bottom': 0,
+                    'padding': '0 0 20px 30px'
+                })
+            }
+            //屏幕小于1300px的变化
+            function reductionContent(){
+                $('.container-fluid').css({
+                    'display':'block'
+                })
+                $('.minibar').css({
+                    'display':'none'
+                })
+                $('.LeftNav').css('display','block')
+                $('.main').css({
+                    'position':'static',
+                    'padding': '0 60px 30px'
+                })
+                $('.content').css({
+                    'padding': '35px 0 0 50px',
+                    'margin-left': '290px'
+                })
+                //content的改变
+                $('.content h1').css({
+                    'font-size':'2.2em'
+                })
+                $('.content h2').css({
+                    'font-size':'25px'
+                })
+                $('.content h3').css({
+                    'font-size':'20px'
+                })
+                $('.content p').css({
+                    'font-size':'16px'
+                })
+                $('.guild-link span a').css({
+                    'font-size':'16px'
+                })
+                $('footer').css({
+                    'font-size':'16px',
+                    'text-align':'left'
+                })
+                //广告的改变
+                $('.TXnext').css({
+                    'position': 'fixed',
+                    'background-color': '#fff',
+                    'right': '10px',
+                    'bottom': '10px',
+                    'padding': '0'
+                })
+            }
+            
+            //变回原样
+            function Contentreduction(){
+                    $('.container-fluid').css({
+                        'display':'block'
+                    })
+                    $('.minibar').css({
+                        'display':'none'
+                    })
+                    $('.LeftNav').css('display','block')
+                    $('.main').css({
+                        'position':'static',
+                        'padding': '0 60px 30px'
+                    })
+                    $('.main').css({
+                        'position':'relative'
+                    })
+                    $('.content').css({
+                        'margin-left':'auto',
+                        'padding': '35px 0 0 50px'
+                    })
+                }
+            
+            
+
+            
         </script>
 </body>
 </html>

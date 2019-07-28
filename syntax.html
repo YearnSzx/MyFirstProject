@@ -12,9 +12,14 @@
 </head>
 <body>
         <nav class="navbar navbar-default">
+            <div class="minibar" style="display: none;">
+                <a href="javascript:;" class="menu-btn"></a>
+                <a href="javascript:;" class="Hlogo"></a>
+            </div>
             <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" href="#">
+                    <img src="img/logoHpage.png" alt="">
                     <span>Vue.js</span>
                 </a>
             </div>
@@ -214,13 +219,14 @@
 
                             <h2>
                                 教程
-                                <select class="versionSelect">
+                               
+                            </h2>
+                            <select class="versionSelect">
                                     <option value="SELF">2.x</option>
                                     <option value="v1">1.0</option>
                                     <option value="012">0.12</option>
                                     <option value="011">0.11</option>
                                 </select>
-                            </h2>
                             
                             <ul class="menuRoot">
                                 <li>
@@ -229,216 +235,66 @@
                                 <!-- 安装 -->
                                 <li>
                                     <a href="install.html" class="LeftNav-current">安装</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">Vue Devtools</a></li>
-                                        <li><a href="#">直接用script引入</a></li>
-                                        <ul>
-                                            <li>
-                                                <a href="#">CDN</a>
-                                            </li>
-                                        </ul>
-                                        <li><a href="#">NPM</a></li>
-                                        <li><a href="#">命令行工具</a></li>
-                                        <li><a href="#">对不同构建版本的解释</a></li>
-                                        <ul>
-                                            <li><a href="#">术语</a></li>
-                                            <li><a href="#">运行时 + 编译器 vs. 只包含运行时</a></li>
-                                            <li><a href="#">开发环境 vs. 生产环境模式</a></li>
-                                            <li><a href="#">CSP 环境</a></li>
-                                        </ul>
-                                        <li><a href="#">开发版本</a></li>
-                                        <li><a href="#">Bower</a></li>
-                                        <li><a href="#">AMD 模块加载器</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 介绍 -->
                                 <li>
                                     <a href="study.html" class="LeftNav-current">介绍</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">Vue.js 是什么</a></li>
-                                        <li><a href="#">起步</a></li>
-                                        <li><a href="#">声明式渲染</a></li>
-                                        <li><a href="#">条件与循环</a></li>
-                                        <li><a href="#">处理用户输入</a></li>
-                                        <li><a href="#">组件化应用构建</a></li>
-                                        <ul>
-                                            <li><a href="#">与自定义元素的关系</a></li>
-                                        </ul>
-                                        <li><a href="#">准备好了吗？</a></li>
-                                    </ul>
                                 </li>
                                 <!-- Vue实例 -->
                                 <li>
                                     <a href="instance.html" class="LeftNav-current">Vue 实例</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">创建一个 Vue 实例</a></li>
-                                        <li><a href="#">数据与方法</a></li>
-                                        <li><a href="#">实例生命周期钩子</a></li>
-                                        <li><a href="#">生命周期图示</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 模板语法 -->
                                 <li>
                                     <a href="syntax.html" class="LeftNav-current" style="color: #42b983;font-weight: 600;">模板语法</a>
                                     <ul class="menuSub" style="display: block;">
-                                        <li><a href="#">插值</a></li>
+                                        <li><a href="javascript:;" class="interpolation" name="interpolation">插值</a></li>
                                         <ul>
-                                            <li><a href="#">文本</a></li>
-                                            <li><a href="#">原始HTML</a></li>
-                                            <li><a href="#">特性</a></li>
-                                            <li><a href="#">使用 JavaScript 表达式</a></li>
+                                            <li><a href="javascript:;" class="text" name="text">文本</a></li>
+                                            <li><a href="javascript:;" class="OriginalHTML" name="OriginalHTML">原始HTML</a></li>
+                                            <li><a href="javascript:;" class="Characteristic" name="Characteristic">特性</a></li>
+                                            <li><a href="javascript:;" class="expressions" name="expressions">使用 JavaScript 表达式</a></li>
                                         </ul>
-                                        <li><a href="#">指令</a></li>
+                                        <li><a href="javascript:;" class="Instructions" name="Instructions">指令</a></li>
                                         <ul>
-                                            <li><a href="#">参数</a></li>
-                                            <li><a href="#">动态参数</a></li>
-                                            <li><a href="#">修饰符</a></li>
+                                            <li><a href="javascript:;" class="parameter" name="parameter">参数</a></li>
+                                            <li><a href="javascript:;" class="DynamicParameter" name="DynamicParameter">动态参数</a></li>
+                                            <li><a href="javascript:;" class="Modifier" name="Modifier">修饰符</a></li>
                                         </ul>
-                                        <li><a href="#">缩写</a></li>
+                                        <li><a href="javascript:;" class="Abbreviation" name="Abbreviation">缩写</a></li>
                                         <ul>
-                                            <li><a href="#">v-bind 缩写</a></li>
-                                            <li><a href="#">v-on 缩写</a></li>
+                                            <li><a href="javascript:;" class="vBindAbbreviation" name="vBindAbbreviation">v-bind 缩写</a></li>
+                                            <li><a href="javascript:;" class="vOnAbbreviation" name="vOnAbbreviation">v-on 缩写</a></li>
                                         </ul>
                                     </ul>
                                 </li>
                                 <!-- 计算属性和侦听器 -->
                                 <li>
                                     <a href="computed.html" class="LeftNav-current">计算属性和侦听器</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">计算属性</a></li>
-                                        <ul>
-                                            <li><a href="#">基础例子</a></li>
-                                            <li><a href="#">计算属性缓存 vs 方法</a></li>
-                                            <li><a href="#">计算属性 vs 侦听属性</a></li>
-                                            <li><a href="#">计算属性的 setter</a></li>
-                                        </ul>
-                                        <li><a href="#">侦听器</a></li>
-                                    </ul>
                                 </li>
                                 <!-- Class 与 Style 绑定 -->
                                 <li>
                                     <a href="#" class="LeftNav-current"> Class 与 Style 绑定</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">绑定 HTML Class</a></li>
-                                        <ul>
-                                            <li><a href="#">对象语法</a></li>
-                                            <li><a href="#">数组语法</a></li>
-                                            <li><a href="#">用在组件上</a></li>
-                                        </ul>
-                                        <li><a href="#">绑定内联样式</a></li>
-                                        <ul>
-                                            <li><a href="#">对象语法</a></li>
-                                            <li><a href="#">数组语法</a></li>
-                                            <li><a href="#">自动添加前缀</a></li>
-                                            <li><a href="#">多重值</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- 条件渲染 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">条件渲染</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">v-if</a></li>
-                                        <ul>
-                                            <li><a href="#">在 template 元素上使用 v-if 条件渲染分组</a></li>
-                                            <li><a href="#">v-else</a></li>
-                                            <li><a href="#">v-else-if</a></li>
-                                            <li><a href="#">用 key 管理可复用的元素</a></li>
-                                        </ul>
-                                        <li><a href="#">v-show</a></li>
-                                        <li><a href="#">v-if vs v-show</a></li>
-                                        <li><a href="#">v-if 与 v-for 一起使用</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 列表渲染 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">列表渲染</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">用 v-for 把一个数组对应为一组元素</a></li>
-                                        <li><a href="#">在 v-for 里使用对象</a></li>
-                                        <li><a href="#">维护状态</a></li>
-                                        <li><a href="#">数组更新检测</a></li>
-                                        <ul>
-                                            <li><a href="#">变异方法</a></li>
-                                            <li><a href="#">替换数组</a></li>
-                                            <li><a href="#">注意事项</a></li>
-                                        </ul>
-                                        <li><a href="#">对象变更检测注意事项</a></li>
-                                        <li><a href="#">显示过滤/排序后的结果</a></li>
-                                        <li><a href="#">在 v-for 里使用值范围</a></li>
-                                        <li><a href="#">在 'template' 上使用 v-for</a></li>
-                                        <li><a href="#">v-for 与 v-if 一同使用</a></li>
-                                        <li><a href="#">在组件上使用 v-for</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 事件处理 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">事件处理</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">监听事件</a></li>
-                                        <li><a href="#">事件处理方法</a></li>
-                                        <li><a href="#">内联处理器中的方法</a></li>
-                                        <li><a href="#">事件修饰符</a></li>
-                                        <li><a href="#">按键修饰符</a></li>
-                                        <ul>
-                                            <li><a href="#">按键码</a></li>
-                                        </ul>
-                                        <li><a href="#">系统修饰键</a></li>
-                                        <ul>
-                                            <li><a href="#">.exact 修饰符</a></li>
-                                            <li><a href="#">鼠标按钮修饰符</a></li>
-                                        </ul>
-                                        <li><a href="#">为什么在 HTML 中监听事件?</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 表单输入绑定 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">表单输入绑定</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">基础用法</a></li>
-                                        <ul>
-                                            <li><a href="#">文本</a></li>
-                                            <li><a href="#">多行文本</a></li>
-                                            <li><a href="#">复选框</a></li>
-                                            <li><a href="#">单选按钮</a></li>
-                                            <li><a href="#">选择框</a></li>
-                                        </ul>
-                                        <li><a href="#">值绑定</a></li>
-                                        <ul>
-                                            <li><a href="#">复选框</a></li>
-                                            <li><a href="#">单选按钮</a></li>
-                                            <li><a href="#">选择框的选项</a></li>
-                                        </ul>
-                                        <li><a href="#">修饰符</a></li>
-                                        <ul>
-                                            <li><a href="#">.lazy</a></li>
-                                            <li><a href="#">.number</a></li>
-                                            <li><a href="#">.trim</a></li>
-                                        </ul>
-                                        <li><a href="#">在组件上使用 v-model</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 组件基础 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">组件基础</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">基本示例</a></li>
-                                        <li><a href="#">组件的复用</a></li>
-                                        <ul>
-                                            <li><a href="#">data 必须是一个函数</a></li>
-                                        </ul>
-                                        <li><a href="#">组件的组织</a></li>
-                                        <li><a href="#">通过 Prop 向子组件传递数据</a></li>
-                                        <li><a href="#">单个根元素</a></li>
-                                        <li><a href="#">监听子组件事件</a></li>
-                                        <ul>
-                                            <li><a href="#">使用事件抛出一个值</a></li>
-                                            <li><a href="#">在组件上使用 v-model</a></li>
-                                        </ul>
-                                        <li><a href="#">通过插槽分发内容</a></li>
-                                        <li><a href="#">动态组件</a></li>
-                                        <li><a href="#">解析 DOM 模板时的注意事项</a></li>
-                                    </ul>
                                 </li>
 
 
@@ -449,118 +305,26 @@
                                 <!-- 组件注册 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">组件注册</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">组件名</a></li>
-                                        <ul>
-                                            <li><a href="#">组件名大小写</a></li>
-                                        </ul>
-                                        <li><a href="#">全局注册</a></li>
-                                        <li><a href="#">局部注册</a></li>
-                                        <li><a href="#">模块系统</a></li>
-                                        <ul>
-                                            <li><a href="#">在模块系统中局部注册</a></li>
-                                            <li><a href="#">基础组件的自动化全局注册</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- Prop -->
                                 <li>
                                     <a href="#" class="LeftNav-current">Prop</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">Prop 的大小写</a></li>
-                                        <li><a href="#">Prop 类型</a></li>
-                                        <li><a href="#">传递静态或动态 Prop</a></li>
-                                        <ul>
-                                            <li><a href="#">传入一个数字</a></li>
-                                            <li><a href="#">传入一个布鲁尔</a></li>
-                                            <li><a href="#">传入一个数组</a></li>
-                                            <li><a href="#">传入一个对象</a></li>
-                                            <li><a href="#">传入一个对象的所有属性</a></li>
-                                        </ul>
-                                        <li><a href="#">单向数据流</a></li>
-                                        <li><a href="#">Prop 验证</a></li>
-                                        <ul>
-                                            <li><a href="#">类型检查</a></li>
-                                        </ul>
-                                        <li><a href="#">非 Prop 的特性</a></li>
-                                        <ul>
-                                            <li><a href="#">替换/合并已有的特性</a></li>
-                                            <li><a href="#">禁用特性继承</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- 自定义事件 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">自定义事件</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">事件名</a></li>
-                                        <li><a href="#">自定义组件的 v-model</a></li>
-                                        <li><a href="#">将原生事件绑定到组件</a></li>
-                                        <li><a href="#">.sync 修饰符</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 插槽 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">插槽</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">插槽内容</a></li>
-                                        <li><a href="#">编译作用域</a></li>
-                                        <li><a href="#">后备内容</a></li>
-                                        <li><a href="#">具名插槽</a></li>
-                                        <li><a href="#">作用域插槽</a></li>
-                                        <ul>
-                                            <li><a href="#">独占默认插槽的缩写语法</a></li>
-                                            <li><a href="#">解构插槽 Prop</a></li>
-                                        </ul>
-                                        <li><a href="#">动态插槽名</a></li>
-                                        <li><a href="#">具名插槽的缩写</a></li>
-                                        <li><a href="#">其它示例</a></li>
-                                        <li><a href="#">废弃了的语法</a></li>
-                                        <ul>
-                                            <li><a href="#">带有 slot 特性的具名插槽</a></li>
-                                            <li><a href="#">带有 slot-scope 特性的作用域插槽</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- 动态组件 & 异步组件 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">动态组件 & 异步组件</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">在动态组件上使用 keep-alive</a></li>
-                                        <li><a href="#">异步组件</a></li>
-                                        <ul>
-                                            <li><a href="#">处理加载状态</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- 处理边界情况 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">处理边界情况</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">访问元素 & 组件</a></li>
-                                        <ul>
-                                            <li><a href="#">访问根实例</a></li>
-                                            <li><a href="#">访问父级组件实例</a></li>
-                                            <li><a href="#">访问子组件实例或子元素</a></li>
-                                            <li><a href="#">依赖注入</a></li>
-                                        </ul>
-                                        <li><a href="#">程序化的事件侦听器</a></li>
-                                        <li><a href="#">循环引用</a></li>
-                                        <ul>
-                                            <li><a href="#">递归组件</a></li>
-                                            <li><a href="#">组件之间的循环引用</a></li>
-                                        </ul>
-                                        <li><a href="#">模板定义的替代品</a></li>
-                                        <ul>
-                                            <li><a href="#">内联模板</a></li>
-                                            <li><a href="#">X-Template</a></li>
-                                        </ul>
-                                        <li><a href="#">控制更新</a></li>
-                                        <ul>
-                                            <li><a href="#">强制更新</a></li>
-                                            <li><a href="#">通过 v-once 创建低开销的静态组件</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
 
 
@@ -571,43 +335,10 @@
                                 <!-- 进入/离开 & 列表过渡 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">进入/离开 & 列表过渡</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">概述</a></li>
-                                        <li><a href="#">单元素/组件的过渡</a></li>
-                                        <ul>
-                                            <li><a href="#">过渡的类名</a></li>
-                                            <li><a href="#">CSS 过渡</a></li>
-                                            <li><a href="#">CSS 动画</a></li>
-                                            <li><a href="#">自定义过渡的类名</a></li>
-                                            <li><a href="#">同时使用过渡和动画</a></li>
-                                            <li><a href="#">显性的过渡持续时间</a></li>
-                                            <li><a href="#">JavaScript 钩子</a></li>
-                                        </ul>
-                                        <li><a href="#">初始渲染的过渡</a></li>
-                                        <li><a href="#">多个元素的过渡</a></li>
-                                        <ul>
-                                            <li><a href="#">过渡模式</a></li>
-                                        </ul>
-                                        <li><a href="#">多个组件的过渡</a></li>
-                                        <li><a href="#">列表过渡</a></li>
-                                        <ul>
-                                            <li><a href="#">列表的进入/离开过渡</a></li>
-                                            <li><a href="#">列表的排序过渡</a></li>
-                                            <li><a href="#">列表的交错过渡</a></li>
-                                        </ul>
-                                        <li><a href="#">可复用的过渡</a></li>
-                                        <li><a href="#">动态过渡</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 状态过渡 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">状态过渡</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">状态动画与侦听器</a></li>
-                                        <li><a href="#">动态状态过渡</a></li>
-                                        <li><a href="#">把过渡放到组件里</a></li>
-                                        <li><a href="#">赋予设计以生命</a></li>
-                                    </ul>
                                 </li>
 
                                 <!-- 可复用性 & 组合 -->
@@ -617,65 +348,18 @@
                                 <!-- 混入 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">混入</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">基础</a></li>
-                                        <li><a href="#">选项合并</a></li>
-                                        <li><a href="#">全局混入</a></li>
-                                        <li><a href="#">自定义选项合并策略</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 自定义指令 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">自定义指令</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">简介</a></li>
-                                        <li><a href="#">钩子函数</a></li>
-                                        <li><a href="#">钩子函数参数</a></li>
-                                        <ul>
-                                            <li><a href="#">动态指令参数</a></li>
-                                        </ul>
-                                        <li><a href="#">函数简写</a></li>
-                                        <li><a href="#">对象字面量</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 渲染函数 & JSX -->
                                 <li>
                                     <a href="#" class="LeftNav-current">渲染函数 & JSX</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">基础</a></li>
-                                        <li><a href="#">节点、树以及虚拟 DOM</a></li>
-                                        <ul>
-                                            <li><a href="#">虚拟 DOM</a></li>
-                                        </ul>
-                                        <li><a href="#">createElement 参数</a></li>
-                                        <ul>
-                                            <li><a href="#">深入数据对象</a></li>
-                                            <li><a href="#">完整示例</a></li>
-                                            <li><a href="#">约束</a></li>
-                                        </ul>
-                                        <li><a href="#">使用 JavaScript 代替模板功能</a></li>
-                                        <ul>
-                                            <li><a href="#">v-if 和 v-for</a></li>
-                                            <li><a href="#">v-model</a></li>
-                                            <li><a href="#">事件 & 按键修饰符</a></li>
-                                            <li><a href="#">插槽</a></li>
-                                        </ul>
-                                        <li><a href="#">JSX</a></li>
-                                        <li><a href="#">函数式组件</a></li>
-                                        <ul>
-                                            <li><a href="#">向子元素或子组件传递特性和事件</a></li>
-                                            <li><a href="#">slots() 和 children 对比</a></li>
-                                        </ul>
-                                        <li><a href="#">模板编译</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 插件 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">插件</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">使用插件</a></li>
-                                        <li><a href="#">开发插件</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 过滤器 -->
                                 <li>
@@ -689,58 +373,18 @@
                                 <!-- 单文件组件 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">单文件组件</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">介绍</a></li>
-                                        <ul>
-                                            <li><a href="#">怎么看待关注点分离？</a></li>
-                                        </ul>
-                                        <li><a href="#">起步</a></li>
-                                        <ul>
-                                            <li><a href="#">例子沙箱</a></li>
-                                            <li><a href="#">针对刚接触 JavaScript 模块开发系统的用户</a></li>
-                                            <li><a href="#">针对高级用户</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- 单元测试 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">单元测试</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">简单的断言</a></li>
-                                        <li><a href="#">编写可被测试的组件</a></li>
-                                        <li><a href="#">断言异步更新</a></li>
-                                    </ul>
                                 </li>
                                 <!-- TypeScript 支持 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">TypeScript 支持</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">发布为 NPM 包的官方声明文件</a></li>
-                                        <li><a href="#">推荐配置</a></li>
-                                        <li><a href="#">开发工具链</a></li>
-                                        <ul>
-                                            <li><a href="#">工程创建</a></li>
-                                            <li><a href="#">编辑器支持</a></li>
-                                        </ul>
-                                        <li><a href="#">基本用法</a></li>
-                                        <li><a href="#">基于类的 Vue 组件</a></li>
-                                        <li><a href="#">增强类型以配合插件使用</a></li>
-                                        <li><a href="#">标注返回值</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 生产环境部署 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">生产环境部署</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">开启生产环境模式</a></li>
-                                        <ul>
-                                            <li><a href="#">不使用构建工具</a></li>
-                                            <li><a href="#">使用构建工具</a></li>
-                                        </ul>
-                                        <li><a href="#">模板预编译</a></li>
-                                        <li><a href="#">提取组件的 CSS</a></li>
-                                        <li><a href="#">跟踪运行时错误</a></li>
-                                    </ul>
                                 </li>
 
 
@@ -751,31 +395,14 @@
                                 <!-- 路由 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">生产环境部署</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">官方路由</a></li>
-                                        <li><a href="#">从零开始简单的路由</a></li>
-                                        <li><a href="#">整合第三方路由</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 状态管理 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">状态管理</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">类 Flux 状态管理的官方实现</a></li>
-                                        <ul>
-                                            <li><a href="#">React 的开发者请参考以下信息</a></li>
-                                        </ul>
-                                        <li><a href="#">简单状态管理起步使用</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 服务端渲染 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">服务端渲染</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">SSR 完全指南</a></li>
-                                        <li><a href="#">Nuxt.js</a></li>
-                                        <li><a href="#">Quasar Framework SSR + PWA</a></li>
-                                    </ul>
                                 </li>
 
 
@@ -786,12 +413,6 @@
                                 <!-- 深入响应式原理 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">深入响应式原理</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">如何追踪变化</a></li>
-                                        <li><a href="#">检测变化的注意事项</a></li>
-                                        <li><a href="#">声明响应式属性</a></li>
-                                        <li><a href="#">异步更新队列</a></li>
-                                    </ul>
                                 </li>
 
 
@@ -802,199 +423,14 @@
                                 <!-- 从 Vue 1.x 迁移 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">从 Vue 1.x 迁移</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">FAQ</a></li>
-                                        <li><a href="#">模板</a></li>
-                                        <ul>
-                                            <li><a href="#">片段实例</a></li>
-                                        </ul>
-                                        <li><a href="#">生命周期钩子函数</a></li>
-                                        <ul>
-                                            <li><a href="#">beforeCompile</a></li>
-                                            <li><a href="#">compiled</a></li>
-                                            <li><a href="#">attached</a></li>
-                                            <li><a href="#">detached</a></li>
-                                            <li><a href="#">init</a></li>
-                                            <li><a href="#">ready</a></li>
-                                        </ul>
-                                        <li><a href="#">v-for</a></li>
-                                        <ul>
-                                            <li><a href="#">v-for 遍历数组时的参数顺序</a></li>
-                                            <li><a href="#">v-for 遍历对象时的参数顺序</a></li>
-                                            <li><a href="#">$index and $key</a></li>
-                                            <li><a href="#">track-by</a></li>
-                                            <li><a href="#">v-for 范围值</a></li>
-                                        </ul>
-                                        <li><a href="#">Props</a></li>
-                                        <ul>
-                                            <li><a href="#">coerce Prop 的参数</a></li>
-                                            <li><a href="#">twoWay Prop 的参数</a></li>
-                                            <li><a href="#">v-bind 的 .once和.sync 修饰符</a></li>
-                                            <li><a href="#">修改 Props</a></li>
-                                            <li><a href="#">根实例的 Props</a></li>
-                                        </ul>
-                                        <li><a href="#">计算属性</a></li>
-                                        <ul>
-                                            <li><a href="#">cache: false</a></li>
-                                        </ul>
-                                        <li><a href="#">Built-In 指令</a></li>
-                                        <ul>
-                                            <li><a href="#">v-bind 真/假值</a></li>
-                                            <li><a href="#">用 v-on 监听原生事件</a></li>
-                                            <li><a href="#">带有 debounce 的 v-model</a></li>
-                                            <li><a href="#">使用 lazy 或者 number 参数的 v-model 。</a></li>
-                                            <li><a href="#">使用内联 value的v-model</a></li>
-                                            <li><a href="#">v-model with v-for Iterated Primitive Values</a></li>
-                                            <li><a href="#">带有 !important 的v-bind:style</a></li>
-                                            <li><a href="#">v-el 和v-ref</a></li>
-                                            <li><a href="#">v-show后面使用v-else</a></li>
-                                        </ul>
-                                        <li><a href="#">自定义指令</a></li>
-                                        <ul>
-                                            <li><a href="#">指令 .literal 修饰符</a></li>
-                                        </ul>
-                                        <li><a href="#">过渡</a></li>
-                                        <ul>
-                                            <li><a href="#">transition 参数</a></li>
-                                            <li><a href="#">可复用的过渡 Vue.transition</a></li>
-                                            <li><a href="#">过渡的 stagger 参数</a></li>
-                                        </ul>
-                                        <li><a href="#">事件</a></li>
-                                        <ul>
-                                            <li><a href="#">events 选项</a></li>
-                                            <li><a href="#">Vue.directive('on').keyCodes</a></li>
-                                            <li><a href="#">$dispatch 和 $broadcast</a></li>
-                                        </ul>
-                                        <li><a href="#">过滤器</a></li>
-                                        <ul>
-                                            <li><a href="#">插入文本之外的过滤器</a></li>
-                                            <li><a href="#">过滤器参数符号</a></li>
-                                            <li><a href="#">内置文本过滤器</a></li>
-                                            <li><a href="#">双向过滤器</a></li>
-                                        </ul>
-                                        <li><a href="#">插槽</a></li>
-                                        <ul>
-                                            <li><a href="#">重名的插槽</a></li>
-                                            <li><a href="#">slot 样式参数</a></li>
-                                        </ul>
-                                        <li><a href="#">特殊属性</a></li>
-                                        <ul>
-                                            <li><a href="#">keep-alive 属性</a></li>
-                                        </ul>
-                                        <li><a href="#">计算插值</a></li>
-                                        <ul>
-                                            <li><a href="#">属性内部的计算插值</a></li>
-                                            <li><a href="#">HTML 计算插值</a></li>
-                                            <li><a href="#">单次绑定</a></li>
-                                        </ul>
-                                        <li><a href="#">响应</a></li>
-                                        <ul>
-                                            <li><a href="#">vm.$watch</a></li>
-                                            <li><a href="#">vm.$set</a></li>
-                                            <li><a href="#">vm.$delete</a></li>
-                                            <li><a href="#">Array.prototype.$set</a></li>
-                                            <li><a href="#">Array.prototype.$remove</a></li>
-                                            <li><a href="#">Vue 实例上的Vue.set 和 Vue.delete</a></li>
-                                            <li><a href="#">替换 vm.$data</a></li>
-                                            <li><a href="#">vm.$get</a></li>
-                                        </ul>
-                                        <li><a href="#">围绕 DOM 的实例方法</a></li>
-                                        <ul>
-                                            <li><a href="#">vm.$appendTo</a></li>
-                                            <li><a href="#">vm.$before</a></li>
-                                            <li><a href="#">vm.$after</a></li>
-                                            <li><a href="#">vm.$remove</a></li>
-                                        </ul>
-                                        <li><a href="#">底层实例方法</a></li>
-                                        <ul>
-                                            <li><a href="#">vm.$eval</a></li>
-                                            <li><a href="#">vm.$interpolate</a></li>
-                                            <li><a href="#">vm.$log</a></li>
-                                        </ul>
-                                        <li><a href="#">实例 DOM 选项</a></li>
-                                        <ul>
-                                            <li><a href="#">replace: false</a></li>
-                                        </ul>
-                                        <li><a href="#">全局配置</a></li>
-                                        <ul>
-                                            <li><a href="#">Vue.config.debug</a></li>
-                                            <li><a href="#">Vue.config.async</a></li>
-                                            <li><a href="#">Vue.config.delimiters</a></li>
-                                            <li><a href="#">Vue.config.unsafeDelimiters</a></li>
-                                        </ul>
-                                        <li><a href="#">全局 API</a></li>
-                                        <ul>
-                                            <li><a href="#">带 el 的 Vue.extend</a></li>
-                                            <li><a href="#">Vue.elementDirective</a></li>
-                                            <li><a href="#">Vue.partial</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- 从 Vue Router 0.7.x 迁移 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">从 Vue Router 0.7.x 迁移</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">Router 初始化</a></li>
-                                        <ul>
-                                            <li><a href="#">router.start</a></li>
-                                        </ul>
-                                        <li><a href="#">Route 定义</a></li>
-                                        <ul>
-                                            <li><a href="#">router.map</a></li>
-                                            <li><a href="#">router.on</a></li>
-                                            <li><a href="#">router.beforeEach</a></li>
-                                            <li><a href="#">subRoutes</a></li>
-                                            <li><a href="#">router.redirect</a></li>
-                                            <li><a href="#">router.alias</a></li>
-                                            <li><a href="#">任意的 Route 属性</a></li>
-                                            <li><a href="#">URL 中的 Query 数组 [] 语法</a></li>
-                                        </ul>
-                                        <li><a href="#">Route 匹配</a></li>
-                                        <ul>
-                                            <li><a href="#">一个或者更多的命名参数</a></li>
-                                        </ul>
-                                        <li><a href="#">链接</a></li>
-                                        <ul>
-                                            <li><a href="#">v-link</a></li>
-                                            <li><a href="#">v-link-active</a></li>
-                                        </ul>
-                                        <li><a href="#">编程导航</a></li>
-                                        <ul>
-                                            <li><a href="#">router.go</a></li>
-                                        </ul>
-                                        <li><a href="#">路由选择：Modes</a></li>
-                                        <ul>
-                                            <li><a href="#">hashbang: false</a></li>
-                                            <li><a href="#">history: true</a></li>
-                                            <li><a href="#">abstract: true</a></li>
-                                        </ul>
-                                        <li><a href="#">路由选项：Misc</a></li>
-                                        <ul>
-                                            <li><a href="#">saveScrollPosition</a></li>
-                                            <li><a href="#">root</a></li>
-                                            <li><a href="#">transitionOnLoad</a></li>
-                                            <li><a href="#">suppressTransitionError</a></li>
-                                        </ul>
-                                        <li><a href="#">路由挂钩</a></li>
-                                        <ul>
-                                            <li><a href="#">activate</a></li>
-                                            <li><a href="#">canActivate</a></li>
-                                            <li><a href="#">deactivate</a></li>
-                                            <li><a href="#">canDeactivate</a></li>
-                                            <li><a href="#">canReuse: false</a></li>
-                                            <li><a href="#">data</a></li>
-                                            <li><a href="#">$loadingRouteData</a></li>
-                                        </ul>
-                                    </ul>
                                 </li>
                                 <!-- 从 Vuex 0.6.x 迁移到 1.0 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">从 Vuex 0.6.x 迁移到 1.0</a>
-                                    <ul class="menuSub">
-                                        <li><a href="#">带字符串属性路径的 store.watch</a></li>
-                                        <li><a href="#">Store 的事件触发器</a></li>
-                                        <li><a href="#">中间件</a></li>
-                                    </ul>
                                 </li>
 
 
@@ -1012,6 +448,12 @@
             </div>
 
             <div class="content">
+                <div class="TXnext">
+                    <span>广告</span>
+                    <a href="#">
+                        <img src="img/TXnext.png" alt="">
+                    </a>
+                </div>
                 <h1>模板语法</h1>
                 <p>
                     Vue.js 使用了基于 HTML 的模板语法，允许开发者声明式地将 DOM 绑定至
@@ -1027,10 +469,10 @@
                     板，<a href="#">直接写渲染 (render) 函数</a>，使用可选的 JSX 语法。
                 </p>
 
-                <h2>
+                <h2 id="interpolation">
                     <a href="#">插值</a>
                 </h2>
-                <h3>
+                <h3 id="text">
                     <a href="#">文本</a>
                 </h3>
                 <p>
@@ -1047,7 +489,7 @@
                     不会更新。但请留心这会影响到该节点上的其它数据绑定：
                 </p>
 
-                <h3>
+                <h3 id="OriginalHTML">
                     <a href="#">原始 HTML</a>
                 </h3>   
                 <p>
@@ -1073,7 +515,7 @@
                 </p>
 
 
-                <h3>
+                <h3 id="Characteristic">
                     <a href="#">特性</a>
                 </h3>
                 <p>
@@ -1090,7 +532,7 @@
                     如果 <code>isButtonDisabled</code> 的值是 <code>null</code>、<code>undefined</code> 或 <code>false</code>，则 <code>disabled</code> 特性甚至不会被包含在渲染出来的 <code>&lt;button&gt;</code> 元素中。
                 </p>
                 
-                <h3>
+                <h3 id="expressions">
                     <a href="#">使用 JavaScript 表达式</a>
                 </h3>
                 <p>
@@ -1121,7 +563,7 @@
                 </p>
 
 
-                <h2>
+                <h2 id="Instructions">
                     <a href="#">指令</a>
                 </h2>
                 <p>
@@ -1138,7 +580,7 @@
 
 
 
-                <h3>
+                <h3 id="parameter">
                     <a href="#">参数</a>
                 </h3>
                 <p>
@@ -1158,7 +600,7 @@
                     在这里参数是监听的事件名。我们也会更详细地讨论事件处理。
                 </p>
 
-                <h3>
+                <h3 id="DynamicParameter">
                     <a href="#">动态参数</a>
                 </h3>
                 <blockquote>
@@ -1209,7 +651,7 @@
 
 
 
-                <h3>
+                <h3 id="Modifier">
                     <a href="#">修饰符</a>
                 </h3>
                 <p>
@@ -1225,7 +667,7 @@
 
 
 
-                <h2>
+                <h2 id="Abbreviation">
                     <a href="#">缩写</a>
                 </h2>
                 <p>
@@ -1236,16 +678,30 @@
                     此，Vue 为 <code>v-bind</code> 和 <code>v-on</code> 这两个最常用的指令，提供了特定简写：
                 </p>
 
-                <h3>
+                <h3 id="vBindAbbreviation">
                     <a href="#"><code>v-bind</code> <strong>缩写</strong></a>
                 </h3>
 <pre><code>&lt;!-- 完整语法 --&gt;
-<span class="preCodeSpanBlue">&lt;a v-on:click=</span><span class="preCodeSpanGreen">"doSomething"</span><span class="preCodeSpanBlue">&gt;</span>...<span class="preCodeSpanBlue">&lt;/a&gt;</span>
+<span class="preCodeSpanBlue">&lt;a v-bind:href=</span><span class="preCodeSpanGreen">"url"</span><span class="preCodeSpanBlue">&gt;</span>...<span class="preCodeSpanBlue">&lt;/a&gt;</span>
+<span class="preCodeSpanBlue">&lt;a :href=</span><span class="preCodeSpanGreen">"url"</span><span class="preCodeSpanBlue">&gt;</span>...<span class="preCodeSpanBlue">&lt;/a&gt;</span>
 </code></pre>
 
                 <p>
                     <a href="#">…</a>
                 </p>
+
+
+                <h3 id="vOnAbbreviation">
+                        <a href="#"><code>v-On</code> <strong>缩写</strong></a>
+                    </h3>
+<pre><code>&lt;!-- 完整语法 --&gt;
+<span class="preCodeSpanBlue">&lt;a v-on:click=</span><span class="preCodeSpanGreen">"doSomething"</span><span class="preCodeSpanBlue">&gt;</span>...<span class="preCodeSpanBlue">&lt;/a&gt;</span>
+<span class="preCodeSpanBlue">&lt;a @click=</span><span class="preCodeSpanGreen">"doSomething"</span><span class="preCodeSpanBlue">&gt;</span>...<span class="preCodeSpanBlue">&lt;/a&gt;</span>
+</code></pre>
+    
+                    <p>
+                        <a href="#">…</a>
+                    </p>
                 <p>
                     它们看起来可能与普通的 HTML 略有不同，但 <code>:</code> 与 <code>@</code> 对于
                     特性名来说都是合法字符，在所有支持 Vue 的浏览器都能被
@@ -1280,20 +736,198 @@
         </div>
 
 
-     <div class="TXnext">
-        <span>广告</span>
-        <a href="#">
-            <img src="img/TXnext.png" alt="">
-        </a>
-    </div>
-    <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $('.navbar-right2>li').mouseover(function(){
-            $(this).children('ul').show();
-        }).mouseleave(function(){
-            $(this).children('ul').hide();
-        })
-    </script>
+     
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $('.navbar-right2>li').mouseover(function(){
+                $(this).children('ul').show();
+            }).mouseleave(function(){
+                $(this).children('ul').hide();
+            })
+            $('.content h2').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+
+            var arr = [interpolation,text,OriginalHTML,Characteristic,expressions,Instructions,parameter,DynamicParameter,Modifier,Abbreviation,vBindAbbreviation,vOnAbbreviation]
+            
+            // var a = $('.menuRoot>li:nth-child(6) .menuSub a');
+            for(var i =0;i<arr.length;i++){
+                console.log(arr[i].id)
+            }
+            $(window).scroll(function () {//为页面添加页面滚动监听事件
+                var wst = $(window).scrollTop(); //滚动条距离顶端值  
+                for (var i = 0; i < arr.length; i++) {  //加循环
+                    if ($("#" + arr[i].id).offset().top <= wst +10 ){ //判断滚动条位置
+                        $('.menuSub a').removeClass('active')
+                        $("." + arr[i].id).addClass("active");
+                    }
+                }
+            });
+            $('.content h3').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+            $('.menuSub a').click(function(){
+                $('.menuSub a').removeClass('active')
+                setTimeout(function(){
+                    $(this).addClass('active');
+                },500) //在延迟后为左边导航栏a添加class
+                $('html').animate({scrollTop: $("#" + this.name).offset().top}, 500);//添加滑动效果
+            })
+
+            //要添加一个页面刚打开就分析页面宽度的计时器
+            var StartOpen = setTimeout(() => {
+                let screenWidth = $(window).width();
+                if(screenWidth<900){//小于900px时的变化
+                    changeWindowWidth()
+                }else if(screenWidth<1300 && screenWidth>900){//大于900且小于1300时的样式
+                    reductionContent()
+                }else{
+                    reductionContent()
+                    Contentreduction()
+                }
+            }, 10);
+
+
+
+
+
+            $(window).resize(function () {
+                var screenWidth = $(window).width();//浏览器当前窗口可视区域宽度
+                if(screenWidth<900){
+                    changeWindowWidth()
+                }else if(screenWidth<1300 && screenWidth>900){
+                    reductionContent()
+                }else{
+                    reductionContent()
+                    Contentreduction()
+                }
+            })
+            //屏幕小于900px的变化
+            function changeWindowWidth(){
+                $('.container-fluid').css({
+                    'display':'none'
+                })
+                $('.minibar').css({
+                    'display':'block'
+                })
+                $('.LeftNav').css('display','none')
+                $('.main').css({
+                    'position':'static',
+                    'padding': '2em 1.4em 0'
+                })
+                //content的改变
+                $('.content').css({
+                    'padding': '0',
+                    'margin-left': '0',
+                    'padding':'2.2em 0'
+                })
+                $('.content h1').css({
+                    'font-size':'2em'
+                })
+                $('.content h2').css({
+                    'font-size':'1.5em'
+                })
+                $('.content h3').css({
+                    'font-size':'1.17em'
+                })
+                $('.content p').css({
+                    'font-size':'14px'
+                })
+                $('.content h3>a::before').css({
+                    'left':'-20px'
+                })
+                $('.guild-link span a').css({
+                    'font-size':'14px'
+                })
+                $('footer').css({
+                    'font-size':'14px',
+                    'text-align':'center'
+                })
+                //广告的改变
+                $('.TXnext').css({
+                    'position': 'relative',
+                    'float': 'right',
+                    'background-color': '#fff',
+                    'right': 0,
+                    'bottom': 0,
+                    'padding': '0 0 20px 30px'
+                })
+            }
+            //屏幕小于1300px的变化
+            function reductionContent(){
+                $('.container-fluid').css({
+                    'display':'block'
+                })
+                $('.minibar').css({
+                    'display':'none'
+                })
+                $('.LeftNav').css('display','block')
+                $('.main').css({
+                    'position':'static',
+                    'padding': '0 60px 30px'
+                })
+                $('.content').css({
+                    'padding': '35px 0 0 50px',
+                    'margin-left': '290px'
+                })
+                //content的改变
+                $('.content h1').css({
+                    'font-size':'2.2em'
+                })
+                $('.content h2').css({
+                    'font-size':'25px'
+                })
+                $('.content h3').css({
+                    'font-size':'20px'
+                })
+                $('.content p').css({
+                    'font-size':'16px'
+                })
+                $('.guild-link span a').css({
+                    'font-size':'16px'
+                })
+                $('footer').css({
+                    'font-size':'16px',
+                    'text-align':'left'
+                })
+                //广告的改变
+                $('.TXnext').css({
+                    'position': 'fixed',
+                    'background-color': '#fff',
+                    'right': '10px',
+                    'bottom': '10px',
+                    'padding': '0'
+                })
+            }
+            
+            //变回原样
+            function Contentreduction(){
+                    $('.container-fluid').css({
+                        'display':'block'
+                    })
+                    $('.minibar').css({
+                        'display':'none'
+                    })
+                    $('.LeftNav').css('display','block')
+                    $('.main').css({
+                        'position':'static',
+                        'padding': '0 60px 30px'
+                    })
+                    $('.main').css({
+                        'position':'relative'
+                    })
+                    $('.content').css({
+                        'margin-left':'auto',
+                        'padding': '35px 0 0 50px'
+                    })
+                }
+            
+            
+
+            
+        </script>
 </body>
 </html>

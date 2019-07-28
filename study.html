@@ -12,9 +12,14 @@
 <body>
     
     <nav class="navbar navbar-default">
+        <div class="minibar" style="display: none;">
+            <a href="javascript:;" class="menu-btn"></a>
+            <a href="javascript:;" class="Hlogo"></a>
+        </div>
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">
+                <img src="img/logoHpage.png" alt="">
                 <span>Vue.js</span>
             </a>
           </div>
@@ -212,15 +217,13 @@
                             </div>
                         </div>
 
-                        <h2>
-                            教程
-                            <select class="versionSelect">
+                        <h2>教程</h2>
+                        <select class="versionSelect">
                                 <option value="SELF">2.x</option>
                                 <option value="v1">1.0</option>
                                 <option value="012">0.12</option>
                                 <option value="011">0.11</option>
                             </select>
-                        </h2>
                         
                         <ul class="menuRoot">
                             <li>
@@ -255,16 +258,16 @@
                             <li>
                                 <a href="study.html" class="LeftNav-current" style="color: #42b983;font-weight: 600;">介绍</a>
                                 <ul class="menuSub" style="display: block;">
-                                    <li><a href="#">Vue.js 是什么</a></li>
-                                    <li><a href="#">起步</a></li>
-                                    <li><a href="#">声明式渲染</a></li>
-                                    <li><a href="#">条件与循环</a></li>
-                                    <li><a href="#">处理用户输入</a></li>
-                                    <li><a href="#">组件化应用构建</a></li>
+                                    <li><a href="javascript:;" class="WhatisVue" name="WhatisVue">Vue.js 是什么</a></li>
+                                    <li><a href="javascript:;" class="StartVue" name="StartVue">起步</a></li>
+                                    <li><a href="javascript:;" class="Rendering" name="Rendering">声明式渲染</a></li>
+                                    <li><a href="javascript:;" class="ConditionsAndCycles" name="ConditionsAndCycles">条件与循环</a></li>
+                                    <li><a href="javascript:;" class="UserInput" name="UserInput">处理用户输入</a></li>
+                                    <li><a href="javascript:;" class="AppConstruction" name="AppConstruction">组件化应用构建</a></li>
                                     <ul>
-                                        <li><a href="#">与自定义元素的关系</a></li>
+                                        <li><a href="javascript:;" class="Relationships" name="Relationships">与自定义元素的关系</a></li>
                                     </ul>
-                                    <li><a href="#">准备好了吗？</a></li>
+                                    <li><a href="javascript:;" class="Ready" name="Ready">准备好了吗？</a></li>
                                 </ul>
                             </li>
                             <!-- Vue实例 -->
@@ -1013,8 +1016,14 @@
 
         <!-- 主要部分 -->
         <div class="content">
+            <div class="TXnext">
+                <span>广告</span>
+                <a href="#">
+                    <img src="img/TXnext.png" alt="">
+                </a>
+            </div>
             <h1>介绍</h1>
-            <h2>
+            <h2 id="WhatisVue">
                 <a href="#">Vue.js 是什么</a>
             </h2>
             <p>Vue (读音 /vjuː/，类似于<strong>view</strong>) 是一套用于构建用户界面的<strong>渐进式框架</strong>。
@@ -1026,7 +1035,7 @@
             <p>如果你想在深入学习 Vue 之前对它有更多了解，我们 <a href="#">制作了一个视频</a>，带您了解其核心概念和一个示例工程。</p>
             <p>如果你已经是有经验的前端开发者，想知道 Vue 与其它库/框架有哪些区别，请查看<a href="#">对比其它框架</a>。</p>
 
-            <h2>
+            <h2 id="StartVue">
                 <a href="#">起步</a>
             </h2>
     
@@ -1059,7 +1068,7 @@
 
 
                 <!-- 声明式渲染 -->
-            <h2>
+            <h2 id="Rendering">
                 <a href="#">声明式渲染</a>
             </h2>
             <div class="Content-Scrimba">
@@ -1128,7 +1137,7 @@
 
 
                 <!-- 条件与循环 -->
-            <h2>
+            <h2 id="ConditionsAndCycles">
                 <a href="#">条件与循环</a>
             </h2>
             <div class="Content-Scrimba">
@@ -1194,7 +1203,7 @@
 
 
             <!-- 处理用户输入 -->
-            <h2>
+            <h2 id="UserInput">
                 <a href="#">处理用户输入</a>
             </h2>
             <div class="Content-Scrimba">
@@ -1251,7 +1260,7 @@
 
 
             <!-- 组件化应用构建 -->
-            <h2>
+            <h2 id="AppConstruction">
                 <a href="#">组件化应用构建</a>
             </h2>
             <div class="Content-Scrimba">
@@ -1351,7 +1360,9 @@ Vue.component(<span class="preCodeSpanGreen">'todo-item'</span>,{
 <span class="preCodeSpanBlue">&lt;/div&gt;</span></code></pre>
 
 
-        <h3>
+
+        <!-- 与自定义元素的关系 -->
+        <h3 id="Relationships">
             <a href="#">与自定义元素的关系</a>
         </h3>
         <p>你可能已经注意到 Vue 组件非常类似于<strong>自定义元素</strong>——它是 <a href="#">Web 组件
@@ -1381,21 +1392,12 @@ Vue.component(<span class="preCodeSpanGreen">'todo-item'</span>,{
 
 
         <!-- 准备好了吗？ -->
-        <h2>
+        <h2 id="Ready">
             <a href="#">准备好了吗？</a>
         </h2>
         <p>我们刚才简单介绍了 Vue 核心最基本的功能——本教程的
             其余部分将更加详细地涵盖这些功能以及其它高级功能，所以请务必读完整个教程！
         </p>
-
-        <div class="guild-link">
-            <span>
-                 ← <a href="#">安装</a>
-            </span>
-            <span>
-                <a href="#">Vue 实例</a> →
-            </span>
-        </div>
 
         <footer>
                 发现错误？想参与编辑？<a href="#">在 GitHub 上编辑此页！</a> 
@@ -1407,14 +1409,202 @@ Vue.component(<span class="preCodeSpanGreen">'todo-item'</span>,{
 
 
 
-    <script src="js/jquery-1.12.4.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script>
-        $('.navbar-right2>li').mouseover(function(){
-            $(this).children('ul').show();
-        }).mouseleave(function(){
-            $(this).children('ul').hide();
-        })
-    </script>
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            $('.navbar-right2>li').mouseover(function(){
+                $(this).children('ul').show();
+            }).mouseleave(function(){
+                $(this).children('ul').hide();
+            })
+            $('.content h2').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+
+            var arr = [WhatisVue,StartVue,Rendering,ConditionsAndCycles,UserInput,AppConstruction,Relationships,Ready]
+            
+            // var a = $('.menuRoot>li:nth-child(6) .menuSub a');
+            for(var i =0;i<arr.length;i++){
+                console.log(arr[i].id)
+            }
+            $(window).scroll(function () {//为页面添加页面滚动监听事件
+                var wst = $(window).scrollTop(); //滚动条距离顶端值  
+                for (var i = 0; i < arr.length; i++) {  //加循环
+                    if ($("#" + arr[i].id).offset().top <= wst +10 ){ //判断滚动条位置
+                        $('.menuSub a').removeClass('active')
+                        $("." + arr[i].id).addClass("active");
+                    }
+                }
+            });
+            $('.content h3').click(function () {
+                $('html').animate({scrollTop: $(this).offset().top}, 500);
+            });
+
+            $('.menuSub a').click(function(){
+                $('.menuSub a').removeClass('active')
+                setTimeout(function(){
+                    $(this).addClass('active');
+                },500) //在延迟后为左边导航栏a添加class
+                $('html').animate({scrollTop: $("#" + this.name).offset().top}, 500);//添加滑动效果
+            })
+
+
+
+
+
+            //要添加一个页面刚打开就分析页面宽度的计时器
+            var StartOpen = setTimeout(() => {
+                let screenWidth = $(window).width();
+                if(screenWidth<900){//小于900px时的变化
+                    changeWindowWidth()
+                }else if(screenWidth<1300 && screenWidth>900){//大于900且小于1300时的样式
+                    reductionContent()
+                }
+                else{
+                    reductionContent()
+                    Contentreduction()
+                }
+            }, 10);
+
+
+
+
+
+            $(window).resize(function () {
+                var screenWidth = $(window).width();//浏览器当前窗口可视区域宽度
+                if(screenWidth<900){
+                    changeWindowWidth()
+                }else if(screenWidth<1300 && screenWidth>900){
+                    reductionContent()
+                }else{
+                    reductionContent()
+                    Contentreduction()
+                }
+            })
+            //屏幕小于900px的变化
+            function changeWindowWidth(){
+                $('.container-fluid').css({
+                    'display':'none'
+                })
+                $('.minibar').css({
+                    'display':'block'
+                })
+                $('.LeftNav').css('display','none')
+                $('.main').css({
+                    'position':'static',
+                    'padding': '2em 1.4em 0'
+                })
+                //content的改变
+                $('.content').css({
+                    'padding': '0',
+                    'margin-left': '0',
+                    'padding':'2.2em 0'
+                })
+                $('.content h1').css({
+                    'font-size':'2em'
+                })
+                $('.content h2').css({
+                    'font-size':'1.5em'
+                })
+                $('.content h3').css({
+                    'font-size':'1.17em'
+                })
+                $('.content p').css({
+                    'font-size':'14px'
+                })
+                $('.content h3>a::before').css({
+                    'left':'-20px'
+                })
+                $('.guild-link span a').css({
+                    'font-size':'14px'
+                })
+                $('footer').css({
+                    'font-size':'14px',
+                    'text-align':'center'
+                })
+                //广告的改变
+                $('.TXnext').css({
+                    'position': 'relative',
+                    'float': 'right',
+                    'background-color': '#fff',
+                    'right': 0,
+                    'bottom': 0,
+                    'padding': '0 0 20px 30px'
+                })
+            }
+            //屏幕小于1300px的变化
+            function reductionContent(){
+                $('.container-fluid').css({
+                    'display':'block'
+                })
+                $('.minibar').css({
+                    'display':'none'
+                })
+                $('.LeftNav').css('display','block')
+                $('.main').css({
+                    'position':'static',
+                    'padding': '0 60px 30px'
+                })
+                $('.content').css({
+                    'padding': '35px 0 0 50px',
+                    'margin-left': '290px'
+                })
+                //content的改变
+                $('.content h1').css({
+                    'font-size':'2.2em'
+                })
+                $('.content h2').css({
+                    'font-size':'25px'
+                })
+                $('.content h3').css({
+                    'font-size':'20px'
+                })
+                $('.content p').css({
+                    'font-size':'16px'
+                })
+                $('.guild-link span a').css({
+                    'font-size':'16px'
+                })
+                $('footer').css({
+                    'font-size':'16px',
+                    'text-align':'left'
+                })
+                //广告的改变
+                $('.TXnext').css({
+                    'position': 'fixed',
+                    'background-color': '#fff',
+                    'right': '10px',
+                    'bottom': '10px',
+                    'padding': '0'
+                })
+            }
+            
+            //变回原样
+            function Contentreduction(){
+                    $('.container-fluid').css({
+                        'display':'block'
+                    })
+                    $('.minibar').css({
+                        'display':'none'
+                    })
+                    $('.LeftNav').css('display','block')
+                    $('.main').css({
+                        'position':'static',
+                        'padding': '0 60px 30px'
+                    })
+                    $('.main').css({
+                        'position':'relative'
+                    })
+                    $('.content').css({
+                        'margin-left':'auto',
+                        'padding': '35px 0 0 50px'
+                    })
+                }
+            
+            
+
+            
+        </script>
 </body>
 </html>
