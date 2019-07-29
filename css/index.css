@@ -66,6 +66,7 @@ body{
     border-radius: 4px;
     background: #Fff;
     padding: 10px 0;
+    z-index: 99;
     border: 1px solid #ddd;
 }
 .navdown li{
@@ -96,6 +97,24 @@ body{
 
 
 .navdown>li:nth-child(3) h4{
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid #eee;
+}
+
+.navdown>li:nth-child(5) h4{
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid #eee;
+}
+
+.navdown>li:nth-child(7) h4{
+    margin-top: 7px;
+    padding-top: 7px;
+    border-top: 1px solid #eee;
+}
+
+.navdown>li:nth-child(9) h4{
     margin-top: 7px;
     padding-top: 7px;
     border-top: 1px solid #eee;

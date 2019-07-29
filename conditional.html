@@ -438,27 +438,6 @@
                                 <!-- 安装 -->
                                 <li>
                                     <a href="install.html" class="LeftNav-current" style="color: #42b983;font-weight: 600;">安装</a>
-                                    <ul class="menuSub" style="display: block;">
-                                        <li><a href="javascript:;" class="VueDevtools" name="VueDevtools">Vue Devtools</a></li>
-                                        <li><a href="javascript:;" class="IntroducingMethod" name="IntroducingMethod">直接用script引入</a></li>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:;" class="CDN" name="CDN">CDN</a>
-                                            </li>
-                                        </ul>
-                                        <li><a href="javascript:;" class="NPM" name="NPM">NPM</a></li>
-                                        <li><a href="javascript:;" class="CLI" name="CLI">命令行工具</a></li>
-                                        <li><a href="javascript:;" class="Interpretation" name="Interpretation">对不同构建版本的解释</a></li>
-                                        <ul>
-                                            <li><a href="javascript:;" class="Term" name="Term">术语</a></li>
-                                            <li><a href="javascript:;" class="Runtime" name="Runtime">运行时 + 编译器 vs. 只包含运行时</a></li>
-                                            <li><a href="javascript:;" class="DevelopEnvironment" name="DevelopEnvironment">开发环境 vs. 生产环境模式</a></li>
-                                            <li><a href="javascript:;" class="CSPEnvironment" name="CSPEnvironment">CSP 环境</a></li>
-                                        </ul>
-                                        <li><a href="javascript:;" class="DevelopmentVersion" name="DevelopmentVersion">开发版本</a></li>
-                                        <li><a href="javascript:;" class="Bower" name="Bower">Bower</a></li>
-                                        <li><a href="javascript:;" class="AMDModuleLoader" name="AMDModuleLoader">AMD 模块加载器</a></li>
-                                    </ul>
                                 </li>
                                 <!-- 介绍 -->
                                 <li>
@@ -483,6 +462,18 @@
                                 <!-- 条件渲染 -->
                                 <li>
                                     <a href="#" class="LeftNav-current">条件渲染</a>
+                                    <ul class="menuSub">
+                                        <li><a href="#">v-if</a></li>
+                                        <ul>
+                                            <li><a href="#">在 template 元素上使用 v-if 条件渲染分组</a></li>
+                                            <li><a href="#">v-else</a></li>
+                                            <li><a href="#">v-else-if</a></li>
+                                            <li><a href="#">用 key 管理可复用的元素</a></li>
+                                        </ul>
+                                        <li><a href="#">v-show</a></li>
+                                        <li><a href="#">v-if vs v-show</a></li>
+                                        <li><a href="#">v-if 与 v-for 一起使用</a></li>
+                                    </ul>
                                 </li>
                                 <!-- 列表渲染 -->
                                 <li>
@@ -656,369 +647,39 @@
             </div>
 
             <div class="content">
-                <div class="TXnext">
-                    <span>广告</span>
+                <h1>条件渲染</h1>
+                <h2>
                     <a href="#">
-                        <img src="img/TXnext.png" alt="">
-                    </a>
-                </div>
-                <h1>安装</h1>
-                <h3 id="Compatibility">
-                    <a href="#">兼容性</a>
-                </h3>
-                <p>Vue <strong>不支持</strong> IE8 及以下版本，因为 Vue 使用了 IE8 无法
-                    模拟的 ECMAScript 5 特性。但它支持所有 <a href="#">兼容 ECMASc
-                    ript 5 的浏览器</a>。</p>
-
-                <h3 id="UpdateLogs">
-                    <a href="#">更新日志</a>
-                </h3>
-                <p>最新稳定版本：2.6.10</p>
-                <p>每个版本的更新日志见 <a href="#">GitHub</a>。</p>
-
-                <h2 id="VueDevtools">
-                    <a href="#">Vue Devtools</a>
-                </h2>
-                <p>在使用 Vue 时，我们推荐在你的浏览器上安装 Vue Devtools。它允许
-                    你在一个更友好的界面中审查和调试 Vue 应用。</p>
-
-                <h2 id="IntroducingMethod">
-                    <a href="#">
-                        直接用 <code>&lt;script&gt;</code> 引入
+                        <code>v-if</code>
                     </a>
                 </h2>
-                <p>直接下载并用 <code>&lt;script&gt;</code> 标签引入，<code>Vue</code> 会被注册为一个全局变量。</p>
-                <p class="tip">
-                    <a href="#">
-                        在开发环境下不要使用压缩版本，不然你就失去了所有常见错误相关的警告!
-                    </a>
-                </p>
-                <div class="btngroup">
-                    <br>
-                    <a href="#" class="button">开发版本</a>
-                    <span>包含完整的警告和调试模式</span>
-                    <br>
-                    <br>
-                    <a href="#" class="button">生产版本</a>
-                    <span>删除了警告，33.30KB min+gzip</span>
-                    <br>
-                </div>
 
-                <h3 id="CDN">
-                    <a href="#" id="cdn">CDN</a>
-                </h3>
-                <p>对于制作原型或学习，你可以这样使用最新版本：</p>
-                <pre><code><span class="preCodeSpanBlue">&lt;script src=</span><span class="preCodeSpanGreen">"https://cdn.jsdelivr.net/npm/vue"</span><span class="preCodeSpanBlue">&gt;&lt;/script&gt;</span></code></pre>
-                <p>对于生产环境，我们推荐链接到一个明确的版本号和构建文件，以避免新版本造成的不可预期的破坏：</p>
-                <pre><code><span class="preCodeSpanBlue">&lt;script src=</span><span class="preCodeSpanGreen">"https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"</span><span class="preCodeSpanBlue">&gt;&lt;/script&gt;</span></code></pre>
-                <p>如果你使用原生 ES Modules，这里也有一个兼容 ES Module 的构建文件：</p>
-                <pre><code><span class="preCodeSpanBlue">&lt;script type=</span><span class="preCodeSpanGreen">"module"</span><span class="preCodeSpanBlue">&gt;</span>
-  <span class="preCodeSpanBrown">import</span> <span class="preCodeSpanViolet">Vue</span> <span class="preCodeSpanBrown">from</span> <span class="preCodeSpanGreen">'https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.esm.browser.js'</span>
-<span class="preCodeSpanBlue">&lt;/script&gt;</span></code></pre>
-                
-                <p>你可以在 <a href="#">cdn.jsdelivr.net/npm/vue</a> 浏览 NPM 包的源代码。</p>
-                <p>Vue 也可以在 <a href="#">unpkg</a> 和 <a href="#">cdnjs</a> 上获取 (cdnjs 的版本更新可能略滞后)。</p>
                 <p>
-                    请确认了解<a href="#">不同构建版本</a>并在你发布的站点中使用<strong>生产环境版本</strong>，
-                    把 <code>vue.js</code> 换成 <code>vue.min.js</code>。这是一个更小的构建，可以带
-                    来比开发环境下更快的速度体验。
+                    <code>v-if</code> 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。
                 </p>
-
-
-                <h2 id="NPM">
-                    <a href="#">NPM</a>
-                </h2>
-                <p>在用 Vue 构建大型应用时推荐使用 NPM 安装<sup><a href="#">[1]</a></sup>。NPM 能很好地和诸
-                    如 <a href="#">webpack</a> 或 <a href="#">Browserify</a> 模块打包器配合使用。同时 Vue 也提
-                    供配套工具来开发<a href="#">单文件组件</a>。</p>
-                <pre><code># 最新稳定版
-$ npm install vue</code></pre>
-                
-
-                <h2 id="CLI">
-                    <a href="#">命令行工具 (CLI)</a>
-                </h2>
-                <p>
-                    Vue 提供了一个<a href="#">官方的 CLI</a>，为单页面应用 (SPA) 快速搭建繁杂的
-                    脚手架。它为现代前端工作流提供了 batteries-included 的构建
-                    设置。只需要几分钟的时间就可以运行起来并带有热重载、保存时 lint 
-                    校验，以及生产环境可用的构建版本。更多详情可查阅 <a href="#">Vue CLI 的文档</a>。
-                </p>
-                <p class="tip">
-                    CLI 工具假定用户对 Node.js 和相关构建工具有一定程度的
-                    了解。如果你是新手，我们强烈建议先在不用构建工具的情
-                    况下通读<a href="#">指南</a>，在熟悉 Vue 本身之后再使用 CLI。
-                </p>
-                
-
-
-                <h2 id="Interpretation">
-                    <a href="#">对不同构建版本的解释</a>
-                </h2>
-                <p>在 <a href="#">NPM 包的 <code>dist</code>/ 目录</a>你将会找到很多不同的 Vue.js 构建版本。这里列出了它们之间的差别：</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>UMD</th>
-                            <th>CommonJS</th>
-                            <th>ES Module (基于构建工具使用)</th>
-                            <th>ES Module (直接用于浏览器)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>完整版</strong></td>
-                            <td>vue.js</td>
-                            <td>vue.common.js</td>
-                            <td>vue.esm.js</td>
-                            <td>vue.esm.browser.js</td>
-                        </tr>
-                        <tr>
-                            <td>只包含运行时版</td>
-                            <td>vue.runtime.js</td>
-                            <td>vue.runtime.common.js</td>
-                            <td>vue.runtime.esm.js</td>
-                            <td>-</td>
-                        </tr>
-                        <tr>
-                            <td>完整版 (生产环境)</td>
-                            <td>vue.min.js</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>vue.esm.browser.min.js</td>
-                        </tr>
-                        <tr>
-                            <td>只包含运行时版 (生产环境)</td>
-                            <td>vue.runtime.min.js</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-
-                <h3 id="Term">
-                    <a href="#">术语</a>
-                </h3>
-                <ul>
-                    <li>
-                        <p><strong>完整版</strong>：同时包含编译器和运行时的版本。</p>
-                    </li>
-                    <li>
-                        <p><strong>编译器</strong>：用来将模板字符串编译成为 JavaScript 渲染函数的代码。</p>
-                    </li>
-                    <li>
-                        <p><strong>运行时</strong>：用来创建 Vue 实例、渲染并处理虚拟 DOM 等的代码。基本上就是除去编译器的其它一切。</p>
-                    </li>
-                    <li>
-                        <p>
-                            <a href="#">UMD</a>
-                            ：UMD 版本可以通过 
-                            <code>&lt;script&gt;</code> 
-                            标签直接用在浏览器中。jsDelivr CDN 的 
-                            <a href="#">https://cdn.jsdelivr.net/npm/vue</a> 
-                            默认文件就是运行时 + 编译器的 UMD 版本 (<code>vue.js</code>)。</p>
-                    </li>
-                    <li>
-                        <p>
-                            <a href="#">CommonJS</a>：CommonJS 版本用来配合老的打包工具比如 <a href="#">Browserify </a>
-                            或 <a href="#">webpack 1</a>。这些打包工具的默认文件(<code>pkg.main</code>)是只包含运行时的CommonJS版本(<code>vue.runtime.common.js</code>)。
-                        </p>
-                    </li>
-                    <li>
-                        <p><a href="#">ES Module</a>：从 2.6 开始 Vue 会提供两个 ES Modules (ESM) 构建文件：</p>
-                        <ul class="">
-                            <li>
-                                <p>
-                                    为打包工具提供的 ESM：为诸如 <a href="#">webpack 2</a> 或 <a href="#">Rollup</a> 提供的
-                                    现代打包工具。ESM 格式被设计为可以被静态分析，所以打包工
-                                    具可以利用这一点来进行“tree-shaking”并将用不到的代码排除
-                                    出最终的包。为这些打包工具提供的默认文件 (<code>pkg.module</code>) 是
-                                    只有运行时的 ES Module 构建 (<code>vue.runtime.esm.js</code>)。
-                                </p>
-                            </li>
-                            <li>
-                                <p>为浏览器提供的 ESM (2.6+)：用于在现代浏览器中通过 <code>&lt;script type="module"&gt;</code> 直接导入。</p>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-
-                <h3 id="Runtime">
-                    <a href="#">运行时 + 编译器 vs. 只包含运行时</a>
-                </h3>
-                <p>如果你需要在客户端编译模板 (比如传入一个字符串给 <code>template</code> 选项，或挂载到一个元
-                    素上并以其 DOM 内部的 HTML 作为模板)，就将需要加上编译器，即完整版：</p>
-                <pre><code>// 需要编译器
-<span class="preCodeSpanBrown">new</span> Vue({
-    template: <span class="preCodeSpanGreen">'&lt;div&gt;{{ hi }}&lt;/div&gt;'</span>
-})
-
-// 不需要编译器
-<span class="preCodeSpanBrown">new</span> Vue({
-   render (h) {
-     <span class="preCodeSpanBrown">return</span> h(<span class="preCodeSpanGreen">'div'</span>, <span class="preCodeSpanBrown">this</span>.hi)
-   }
-})</code></pre>
-
-                <p>当使用 <code>vue-loader</code> 或 <code>vueify</code> 的时候，<code>*.vue</code> 文件内部的模板会在构建时预编
-                    译成 JavaScript。你在最终打好的包里实际上是不需要编译器的，所以只用运行时版本即可。</p>
-                <p>因为运行时版本相比完整版体积要小大约 30%，所以应该尽可能使用这个版本。如果你仍然希望使用完整版，则需要在打包工具里配置一个别名：</p>
-                <p><strong>webpack</strong></p>
-<pre><code><span class="preCodeSpanGreen">module</span>.exports = {
-   // ...
-  resolve: {
-    alias: {
-        <span class="preCodeSpanGreen">'vue$'</span>: <span class="preCodeSpanGreen">'vue/dist/vue.esm.js'</span> // 用 webpack 1 时需用 'vue/dist/vue.common.js'
-    }
-  }
-}</code></pre>
-
-                <p><strong>Rollup</strong></p>
-<pre><code><span class="preCodeSpanBrown">const</span> alias = <span class="preCodeSpanGreen">require</span>(<span class="preCodeSpanGreen">'rollup-plugin-alias'</span>)
-
-rollup({
-  // ...
-  plugins: [
-    alias({
-      <span class="preCodeSpanGreen">'vue'</span>: <span class="preCodeSpanGreen">require</span>.resolve(<span class="preCodeSpanGreen">'vue/dist/vue.esm.js'</span>)
-    })
-  ]
-})</code></pre>
-
-                <p><strong>Browserify</strong></p>
-                <p>添加到你项目的 <code>package.json</code>：</p>
-<pre><code>{
-  // ...
-    <span class="preCodeSpanGreen">"browser"</span>: {
-      <span class="preCodeSpanGreen">"vue"</span>: <span class="preCodeSpanGreen">"vue/dist/vue.common.js"</span>
-    }
-}</code></pre>
-                <p><strong>Parcel</strong></p>
-                <p>在你项目的 <code>package.json</code> 中添加：</p>
-<pre><code>{
-    // ...
-      <span class="preCodeSpanGreen">"alias"</span>: {
-        <span class="preCodeSpanGreen">"vue"</span>: <span class="preCodeSpanGreen">"./node_modules/vue/dist/vue.common.js"</span>
-    }
-}</code></pre>
-
-
-                <h3 id="DevelopEnvironment">
-                    <a href="#">开发环境 vs. 生产环境模式</a>
-                </h3>
-                <p>对于 UMD 版本来说，开发环境/生产环境模式是硬编码好的：开发环境下用未压缩的代码，生产环境下使用压缩后的代码。</p>
-                <p>CommonJS 和 ES Module 版本是用于打包工具的，因此我们不提供压缩后的版本。你需要自行将最终的包进行压缩。</p>
-                <p>
-                    CommonJS 和 ES Module 版本同时保留原始的 <code>process.env.NODE_ENV</code> 检测，以决
-                    定它们应该运行在什么模式下。你应该使用适当的打包工具配置来替换这些环境变量以
-                    便控制 Vue 所运行的模式。把 <code>process.env.NODE_ENV</code> 替换为字符串字面量同时可
-                    以让 UglifyJS 之类的压缩工具完全丢掉仅供开发环境的代码块，以减少最终的文件
-                    尺寸。
-                </p>
-                <p><strong>webpack</strong></p>
-                <p>在 webpack 4+ 中，你可以使用 <code>mode</code> 选项：</p>
-<pre><code><span class="preCodeSpanGreen">module</span>.exports = {
-    mode: <span class="preCodeSpanGreen">'production'</span>
-}</code></pre>
-
-
-                <p>但是在 webpack 3 及其更低版本中，你需要使用 <a href="#">DefinePlugin</a>：</p>
-<pre><code><span class="preCodeSpanBrown">var</span> webpack = <span class="preCodeSpanGreen">require</span>(<span class="preCodeSpanGreen">'webpack'</span>)
-
-<span class="preCodeSpanGreen">module</span>.exports = {
-  // ...
-  plugins: [
-    // ...
-    <span class="preCodeSpanBrown">new</span> webpack.DefinePlugin({
-      <span class="preCodeSpanGreen">'process.env'</span>: {
-        NODE_ENV: <span class="preCodeSpanGreen">JSON</span>.stringify(<span class="preCodeSpanGreen">'production'</span>)
-      }
-    })
-  ]
-}</code></pre>
-                <p><strong>Rollup</strong></p>
-                <p>使用 <a href="#">rollup-plugin-replace</a>：</p>
-<pre><code><span class="preCodeSpanBrown">const</span> replace = <span class="preCodeSpanGreen">require</span>(<span class="preCodeSpanGreen">'rollup-plugin-replace'</span>)
-
-rollup({
-  // ...
-  plugins: [
-    replace({
-    <span class="preCodeSpanGreen">'process.env.NODE_ENV'</span>: <span class="preCodeSpanGreen">JSON</span>.stringify(<span class="preCodeSpanGreen">'production'</span>)
-      <span class="preCodeSpanGreen">'process.env'</span>: {
-    })
-  ]
-}.then(...)</code></pre>
-
-                <p><strong>Browserify</strong></p>
-                <p>为你的包应用一次全局的 <a href="#">envify</a> 转换。</p>
-<pre><code>NODE_ENV=production browserify -g envify -e main.js | uglifyjs -c -m > build.js</code></pre>
-                <p>也可以移步<a href="#">生产环境部署</a>。</p>
-
-
-
-                <h3 id="CSPEnvironment">
-                    <a href="#">CSP 环境</a>
-                </h3>
-                <p>
-                    有些环境，如 Google Chrome Apps，会强制应用内容安全策略 (CSP)，不能使用 <code>new Function()</code> 
-                    对表达式求值。这时可以用 CSP 兼容版本。完整版本依赖于该功能来编译模板，所以无法在这些环境
-                    下使用。
-                </p>
-                <p>
-                    另一方面，运行时版本则是完全兼容 CSP 的。当通过 <a href="#">webpack + vue-loader </a>
-                    或者 <a href="#">Browserify + vueify</a> 构建时，模板将被预编译为 <code>render</code> 函数，可以
-                    在 CSP 环境中完美运行。</p>
+<pre><code>
+    
+</code></pre>
 
 
 
 
-                <h2 id="DevelopmentVersion">
-                    <a href="#">开发版本</a>
-                </h2>
-                <p>
-                    <strong>重要</strong>: GitHub 仓库的 <code>/dist</code> 文件夹只有在新版本发布时才会提交。如果想要使
-                    用 GitHub 上 Vue 最新的源码，你需要自己构建！
-                </p>
-<pre><code>git <span class="preCodeSpanGreen">clone</span> https://github.com/vuejs/vue.git node_modules/vue
-<span class="preCodeSpanGreen">cd</span> node_modules/vue
-npm install
-npm run build</code></pre>
-            
-
-                <h2 id="Bower">
-                    <a href="#">Bower</a>
-                </h2>
-                <p>Bower 只提供 UMD 版本。</p>
-<pre><code># 最新稳定版本
-$ bower install vue</code></pre>
 
 
 
 
-                <h2 id="AMDModuleLoader">
-                    <a href="#">AMD 模块加载器</a>
-                </h2>
-                <p>所有 UMD 版本都可以直接用作 AMD 模块。</p>
-                <p>
-                    <small>
-                        <br>
-                        <strong>译者注</strong>
-                        [1] 对于中国大陆用户，建议将 NPM 源设置为<a href="#">国内的镜像</a>，可以大幅提升安装速度。
-                    </small>
-                </p>
 
-                <div class="guild-link">
-                        <a href="#">介绍</a>
-                        →
-                </div>
 
-                <footer>
-                        发现错误？想参与编辑？ <a href="#">在 GitHub 上编辑此页！</a>
-                </footer>
+
+
+
+
+
+
+
+
+
+
             </div><!-- content -->
         </div>
 

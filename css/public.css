@@ -82,6 +82,7 @@ body{
     bottom: 0;
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 99;
 }
 .LeftNavMenu{
 
@@ -113,6 +114,7 @@ body{
     color: #273849;
     margin-top: 5px;
     font-family: "SourceSansProLight-semibold",Arial, sans-serif;
+    display: inline-block;
 }
 
 
@@ -161,7 +163,7 @@ body{
     background-color: #fff;
     left: 0;
     width: 100%;
-    z-index: 999;
+    z-index: 9;
 }
 .container-fluid{
     padding: 10px 60px;
@@ -549,4 +551,22 @@ footer{
     max-width: 100%;
     display: flex;
     justify-content: flex-end;
+}
+
+
+
+.MiniLeftNavBar{
+    margin-bottom: 20px;
+}
+.MiniLeftNavBar ul{
+    padding-left: 10px;
+}
+.MiniLeftNavBar li{
+    margin-top: 7px;
+    line-height: 1.5em;
+}
+.MiniLeftNavBar a,.MiniLeftNavBar h4{
+    font-size: 14px;
+    color: #304455;
+    font-weight: 400;
 }
