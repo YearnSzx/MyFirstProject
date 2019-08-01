@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>打地鼠</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            transition: all .3s;
+        }
+        body{
+            background-color: #cccccc;
+        }
+        ul{
+            margin: 150px auto;
+            position: relative;
+            display: none;
+        }
+        ul li{
+            list-style: none;
+            width: 200px;
+            height: 50px;
+            margin-right: 30px;
+            margin-bottom: 175px;
+            background: #cccccc;
+            color: #956562;
+            display: inline-block;
+            border-radius: 50%;
+            position: relative;
+            transition: all .3s;
+        }
+        ul li div{
+
+            height: 100px;
+            border-radius: 50% 50% 0 0;
+            position: relative;
+            overflow: hidden;
+            top: -60px;
+        }
+        ul li div img{
+            width: 60px;
+            position: absolute;
+            top: 100px;
+            left: calc(50% - 30px);
+            transition: all 1s;
+            z-index: 99;
+        }
+        h1{
+            color: #956562;
+            margin: 50px auto;
+            text-align: center;
+            z-index: 99;
+            opacity: 1;
+        }
+        h1 a{
+            color: black;
+            text-decoration: none;
+        }
+        h2{
+            color: #956562;
+            margin: 50px auto;
+            text-align: center;
+            z-index: 99;
+        }
+        h2 a{
+            color: black;
+            text-decoration: none;
+        }
+        .top{
+            /* display: flex; */
+        }
+        .top h2:first-child{
+            width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            border: 3px solid black;
+        }
+        #daojishi{
+            position: absolute;
+            top: 206px;
+            font-size: 74px;
+            right: 79px;
+            opacity: 0;
+        }
+        .daojishi{
+            position: absolute;
+            top: 131px;
+            font-size: 74px;
+            right: 79px;
+            opacity: 0;
+        }
+        .Start{
+            cursor: pointer;
+            font-size: 32px;
+            outline: none;
+            border: none;
+            background: none;
+            font-weight: 600;
+        }
+        .goToBaidu a{
+            cursor: pointer;
+        }
+        .pointbox{
+            position: absolute;
+            font-size: 50px;
+            color: blue;
+            top: 0;
+            left: 45%;
+            background: #cccccc;
+            opacity: 0;
+        }
+        img{
+            cursor: url('img/chuizi.ico'),auto;
+        }
+
+    </style>
+<body>
+    
+
+
+    <div class="top">
+        <h2>
+            <a href="#">首先,这是一个打地鼠游戏,如果准备好了请点击<a href="#" class="TrueStart" style="color:burlywood;">开始游戏!</a></a>
+        </h2>
+        <h1>
+            <a href="http://www.baidu.com" title="结束游戏" class="fakeStart">开始游戏</a>
+        </h1>
+        <h1>
+            <button href="javascript:;" title="开始游戏" class="Start" disabled>结束游戏</button>
+        </h1>
+        <h1>
+            <img src="img/mouse.png" alt="" style="width: 305px;">
+            <img src="img/mouse.png" alt="" style="width: 305px;">
+
+        </h1>
+    </div>
+        
+    <div class="pointbox">
+        分数 <span class="point"></span>
+    </div>
+    
+
+    <ul>
+        
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+        <li>
+            <div><img src="img/mouse.png" alt=""></div>
+        </li>
+    </ul>
+
+    <div class="daojishi">
+        倒计时
+    </div>
+    <div id="daojishi">
+        30
+    </div>
+
+    <div>
+       
+    </div>
+    <script src="js/jquery-1.12.4.js"></script>
+    <script>
+
+        $('.fakeStart').click(function(){
+            alert('这是假的！')
+        })
+
+
+
+        $('.TrueStart').click(function(){
+            ReadyGame()
+            $('.Start').removeAttr("disabled");
+        })
+        
+        $('.Start').click(function(){
+            $(this).text('游戏中..').css('color','#ffffff')
+            StartGame()
+        })
+  
+    
+        $('.Start').hover(function(){
+            $(this).text('开始游戏').css('color','#ffffff')
+        },function(){
+            $(this).text('结束游戏').css('color','black')
+        })
+
+        console.log($('#daojishi').text())
+
+
+
+        //开始过程
+        function ReadyGame(){
+            $('.TrueStart').parent().css('display','none')
+            $('.top h1:last-child').css('display','none')
+            $('ul').fadeIn(500)
+            $('.top').css('display','flex');
+            $('.daojishi').css('opacity','1')
+            $('#daojishi').css('opacity','1')
+            $('.pointbox').css('opacity','1')
+            $('.Start').attr("disabled","");
+        }
+
+
+
+        
+        //游戏过程
+        function StartGame(){
+            $('.Start').attr("disabled","disabled");
+            var li = $('li');
+            for(var i = 0;i<li.length;i++){
+            var num22 = Math.floor(Math.random() * 110 )
+            var num222 = Math.floor(Math.random() * 147 )
+            var num2 = Math.floor(Math.random() * 173 )
+            var num2222 = Math.floor(Math.random() * 174 )
+            $('li').eq(i).css({
+                'margin-bottom':num22,
+                'margin-right':num222,
+                'margin-top':num2222,
+                'margin-left':num2
+            })
+        }
+
+            
+            //产生随机数
+            var aaaa = setInterval(() => {
+                var num = Math.floor(Math.random() * 10)
+                $('ul li:nth-child('+num+') div').children('img').css({
+                    'top':'0'
+                })
+                $('ul li:nth-child('+num+') div').css({
+                    'width':'200px',
+                    'transition':'all .3s'
+                }).parent().css('background','black')
+                setTimeout(() => {
+                    $('ul li:nth-child('+num+') div').children('img').css({
+                        'top':'100px',
+                        
+                    })
+                    $('ul li:nth-child('+num+') div').css({
+                        'width':'200px',
+                        'transition':'all .3s'
+                    }).parent().css('background','#cccccc')
+                }, 550);
+            }, 600);
+
+            //分数
+            var point = 0;
+            var change =true;
+            $('.point').text(point)
+                
+            $('ul li div img').click(function(){
+                
+                point = point + 1;
+                $('.point').text(point)
+                change = false;
+            })
+
+            //倒计时部分
+            function ddd(){
+                var a = 30;
+                function daojishi(a){
+                  
+                    if(a>0){
+    
+                        $('#daojishi').text(a--);
+                    }else{
+                        clearInterval(aaaa);
+                        clearInterval(aaaaaa)
+                        a = 30
+                        $('.Start').removeAttr("disabled");
+                        $('#daojishi').text(0);
+                        $('.Start').text('结束游戏').css('color','black')
+                        alert('游戏结束,您的分数为'+point)
+                    }
+                }
+                
+                var aaaaaa = setInterval(function(){
+                    if(change == false){
+                        a= a+1;
+                    }
+                    change = true;
+                    daojishi(a)
+                    a--
+                }, 1000);
+            }
+            
+            ddd()
+
+            
+
+        
+            //地鼠出来
+            function mouseTotop(){
+                $(this).children('img').css({
+                    'top':'0'
+                })
+            }
+            //地鼠进去
+            function mouseToBottom(){
+                $(this).children('img').css({
+                    'top':'-100px'
+                })
+            }
+        }
+        
+
+        
+        
+        //分数
+
+        
+
+
+        
+
+         // $('ul li').mouseover(function(){
+        //     $(this).children('div').css({
+        //         'width':'200px',
+        //         'height':'200px',
+        //         'top':'0',
+        //         'left':'0'
+        //     })
+        //     setTimeout(() => {
+        //         $(this).children('div').css({
+        //             'width':'0',
+        //             'height':'0',
+        //             'top':'50%',
+        //             'left':'50%'
+        //         })
+        //     }, 5000);
+        // })
+        
+
+                
+        //获取0-1之间的随机数
+        // var num = Math.random();
+        // //获取1-10之间的随机数
+        // var num = Math.floor(Math.random() * 10)
+        // console.log(num)
+        
+        // $('ul li div').click(function(){
+        //     $(this).children('img').css({
+        //         'top':'0'
+        //     })
+        // })
+    
+        // setTimeout(() => {
+            
+            
+        // }, 30000);
+            
+
+        //倒计时部分
+
+
+
+
+
+        // let app = new Vue({
+            //     el:".point",
+            //     data:{
+            //         msg:new Number(0)
+            //     },
+            //     methods: {
+            //         changed:function(){
+            //             this.msg +=1;
+            //         }
+            //     }
+            // })
+    </script>
+</body>
+</html>

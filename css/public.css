@@ -22,6 +22,7 @@ ul,li,a{
     font-family: "SourceSansProLight-semibold";
     src: url("SourceSansPro-Semibold.ttf");
     font-weight:bold;
+    box-sizing: 
 }
 
 body{
@@ -569,4 +570,18 @@ footer{
     font-size: 14px;
     color: #304455;
     font-weight: 400;
+}
+
+
+
+blockquote{
+    margin: 32px 0;
+    padding: 0;
+    padding-left: 20px;
+    border-left: 4px solid #42b983;
+}
+.content blockquote p{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
 }

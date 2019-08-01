@@ -1,31 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //大屏状态下导航栏的出现与消失
 $('.navbar-right2>li').mouseover(function(){
     $(this).children('ul').show();
@@ -86,11 +60,15 @@ var StartOpen = setTimeout(() => {
 //小屏幕状态下的导航栏的收缩和放出
 function MiniBarOpenAndClose(){
     $('.menu-btn').click(function(){
-        MiniLeftNavOpen()
+        MiniLeftNavOpen()    
     })
-    $('.content').click(function(){
-        MiniLeftNavClose()
-    })
+    
+        $('.content').click(function(){
+            if($(window).width()<900){
+                MiniLeftNavClose()
+            }
+        })
+    
     function MiniLeftNavOpen(){
     $('.LeftNav').css({
         'left':'0',
@@ -101,7 +79,11 @@ function MiniBarOpenAndClose(){
             'left':'-300px',
         })
     }
+    console.log(1212132132)
 }
+
+
+
 
 $(window).resize(function () {
     var screenWidth = $(window).width();//浏览器当前窗口可视区域宽度
@@ -110,6 +92,9 @@ $(window).resize(function () {
         MiniBarOpenAndClose()  //小屏幕状态下的导航栏的收缩和放出
     }else if(screenWidth<1300 && screenWidth>900){
         reductionContent()
+        $('.LeftNav').css({
+            'left':'0',
+        })
     }else{
         reductionContent()
         Contentreduction()

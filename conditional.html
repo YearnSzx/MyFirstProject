@@ -657,22 +657,83 @@
                 <p>
                     <code>v-if</code> 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 truthy 值的时候被渲染。
                 </p>
-<pre><code>
-    
+<pre><code><span class="preCodeSpanBlue">&lt;h1 v-if=</span><span class="preCodeSpanGreen">"awesome"</span><span class="preCodeSpanBlue">&gt;</span>Vue is awesome!<span class="preCodeSpanBlue">&lt;/h1&gt;</span></code></pre>
+                <p>也可以用 <code>v-else</code> 添加一个“else 块”：</p>
+<pre><code><span class="preCodeSpanBlue">&lt;h1 v-if=</span><span class="preCodeSpanGreen">"awesome"</span><span class="preCodeSpanBlue">&gt;</span>Vue is awesome!<span class="preCodeSpanBlue">&lt;/h1&gt;</span>
+<span class="preCodeSpanBlue">&lt;h1 v-else</span><span class="preCodeSpanBlue">&gt;</span>Oh no 😢<span class="preCodeSpanBlue">&lt;/h1&gt;</span></code></pre>
+
+
+                <h3>
+                    <a href="#">在 <code>&lt;template&gt;</code> 元素上使用 <code>v-if</code> 条件渲染分组</a>
+                </h3>
+                <p>
+                    因为 <code>v-if</code> 是一个指令，所以必须将它添加到一个元素上。但是如果想切换多个元素呢？此时可以把一个 <code>&lt;template&gt;</code> 
+                    元素当做不可见的包裹元素，并在上面使用 <code>v-if</code>。最终的渲染结果将不包含 <code>&lt;template&gt;</code> 元素。
+                </p>
+<pre><code><span class="preCodeSpanBlue">&lt;template v-if=</span><span class="preCodeSpanGreen">"ok"</span><span class="preCodeSpanBlue">&gt;</span>
+  <span class="preCodeSpanBlue">&lt;h1&gt;</span>Title<span class="preCodeSpanBlue">&lt;/h1&gt;</span>
+  <span class="preCodeSpanBlue">&lt;p&gt;</span>Paragraph 1<span class="preCodeSpanBlue">&lt;/p&gt;</span>
+  <span class="preCodeSpanBlue">&lt;p&gt;</span>Paragraph 2<span class="preCodeSpanBlue">&lt;/p&gt;</span>
+<span class="preCodeSpanBlue">&lt;/template&gt;</span></code></pre>
+
+                <h3>
+                    <a href="#"><code>v-else</code></a>
+                </h3>
+                <p>你可以使用 <code>v-else</code> 指令来表示 <code>v-if</code> 的“else 块”：</p>
+<pre><code><span class="preCodeSpanBlue">&lt;div v-if=</span><span class="preCodeSpanGreen">"Math.random() &gt; 0.5"</span><span class="preCodeSpanBlue">&gt;</span>
+  Now you see me
+<span class="preCodeSpanBlue">&lt;/div&gt;</span>
+<span class="preCodeSpanBlue">&lt;div v-else&gt;</span>
+  Now you don't
+<span class="preCodeSpanBlue">&lt;/div&gt;</span></code></pre>
+
+
+                <p><code>v-else</code> 元素必须紧跟在带 <code>v-if</code> 或者 <code>v-else-if</code> 的元素的后面，否则它将不会被识别。</p>
+                <h3>
+                    <a href="#"><code>v-else-if</code></a>
+                </h3>
+                <blockquote>
+                    <p>
+                        2.1.0 新增
+                    </p>        
+                </blockquote>
+                <p>
+                    <code>v-else-if</code>，顾名思义，充当 <code>v-if</code> 的“else-if 块”，可以连续使用：
+                </p>
+<pre><code><span class="preCodeSpanBlue">&lt;div v-if=</span><span class="preCodeSpanGreen">"type === 'A'"</span><span class="preCodeSpanBlue">&gt;</span>
+  A
+<span class="preCodeSpanBlue">&lt;/div&gt;</span>
+<span class="preCodeSpanBlue">&lt;div v-else-if=</span><span class="preCodeSpanGreen">"type === 'B'"</span><span class="preCodeSpanBlue">&gt;</span>
+  B
+<span class="preCodeSpanBlue">&lt;/div&gt;</span>
+<span class="preCodeSpanBlue">&lt;div v-else-if=</span><span class="preCodeSpanGreen">"type === 'C'"</span><span class="preCodeSpanBlue">&gt;</span>
+  C
+<span class="preCodeSpanBlue">&lt;/div&gt;</span>
+<span class="preCodeSpanBlue">&lt;div v-else&gt;</span>
+  Not A/B/C
+<span class="preCodeSpanBlue">&lt;/div&gt;</span>
 </code></pre>
 
+                <p>类似于 <code>v-else</code>，<code>v-else-if</code> 也必须紧跟在带 <code>v-if</code> 或者 <code>v-else-if</code> 的元素之后。</p>
 
+                <h3>
+                    <a href="#">用 <code>key</code> 管理可复用的元素</a>
+                </h3>
+                <p>
+                    Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从头开始渲染。这么做除了使 Vue 变得非常快之外，还有其它一些好处。例如，如果你允许用户在不同的登录方式之间切换：
+                </p>
+<pre><code><span class="preCodeSpanBlue">&lt;template v-if=</span><span class="preCodeSpanGreen">"loginType === 'username'"</span><span class="preCodeSpanBlue">&gt;</span>
+  <span class="preCodeSpanBlue">&lt;label&gt;</span>Username<span class="preCodeSpanBlue">&lt;/label&gt;</span>
+  <span class="preCodeSpanBlue">&lt;input placeholder=</span><span class="preCodeSpanGreen">"Enter your username"</span><span class="preCodeSpanBlue">&gt;</span>
+<span class="preCodeSpanBlue">&lt;/template&gt;</span>
+<span class="preCodeSpanBlue">&lt;template v-else&gt;</span>
+  <span class="preCodeSpanBlue">&lt;label&gt;</span>Email<span class="preCodeSpanBlue">&lt;/label&gt;</span>
+  <span class="preCodeSpanBlue">&lt;input placeholder=</span><span class="preCodeSpanGreen">"Enter your email address"</span><span class="preCodeSpanBlue">&gt;</span>
+<span class="preCodeSpanBlue">&lt;/template&gt;</span></code></pre>
 
-
-
-
-
-
-
-
-
-
-
+                <p>
+                    那么在上面的代码中切换 loginType 将不会清除用户已经输入的内容。因为两个模板使用了相同的元素，<code>&lt;input&gt;</code> 不会被替换掉——仅仅是替换了它的 placeholder。
+                </p>
 
 
 
@@ -690,11 +751,11 @@
         <script src="js/public.js"></script>
         <script>
             
-            var Idarr = [VueDevtools,IntroducingMethod,CDN,NPM,CLI,Interpretation,Term,Runtime,
-            DevelopEnvironment,CSPEnvironment,DevelopmentVersion,Bower,AMDModuleLoader]
+            // var Idarr = [VueDevtools,IntroducingMethod,CDN,NPM,CLI,Interpretation,Term,Runtime,
+            // DevelopEnvironment,CSPEnvironment,DevelopmentVersion,Bower,AMDModuleLoader]
 
 
-            scrollBehavior (Idarr)
+            // scrollBehavior (Idarr)
 
         </script>
 </body>
