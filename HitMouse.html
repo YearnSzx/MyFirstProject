@@ -193,8 +193,6 @@
             alert('这是假的！')
         })
 
-
-
         $('.TrueStart').click(function(){
             ReadyGame()
             $('.Start').removeAttr("disabled");
@@ -205,16 +203,12 @@
             StartGame()
         })
   
-    
         $('.Start').hover(function(){
             $(this).text('开始游戏').css('color','#ffffff')
         },function(){
             $(this).text('结束游戏').css('color','black')
         })
-
         console.log($('#daojishi').text())
-
-
 
         //开始过程
         function ReadyGame(){
@@ -228,9 +222,6 @@
             $('.Start').attr("disabled","");
         }
 
-
-
-        
         //游戏过程
         function StartGame(){
             $('.Start').attr("disabled","disabled");
@@ -259,10 +250,10 @@
                     'width':'200px',
                     'transition':'all .3s'
                 }).parent().css('background','black')
+
                 setTimeout(() => {
                     $('ul li:nth-child('+num+') div').children('img').css({
-                        'top':'100px',
-                        
+                        'top':'100px'
                     })
                     $('ul li:nth-child('+num+') div').css({
                         'width':'200px',
@@ -330,14 +321,11 @@
                 })
             }
         }
-        
 
-        
         
         //分数
 
-        
-
+    
 
         
 
@@ -395,6 +383,13 @@
             //         }
             //     }
             // })
+
+
+
+
+
+
+        
     </script>
 </body>
 </html>

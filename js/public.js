@@ -10,8 +10,6 @@ $('.content h2').click(function () {
     $('html').animate({scrollTop: $(this).offset().top}, 500);
 });
 
-
-
 //左边滚动条事件
 function scrollBehavior (arr){
     $(window).scroll(function () {//为页面添加页面滚动监听事件
@@ -24,7 +22,6 @@ function scrollBehavior (arr){
         }
     });
 }
-
 
 
 $('.content h3').click(function () {
@@ -54,9 +51,6 @@ var StartOpen = setTimeout(() => {
     }
 }, 10);
 
-
-
-
 //小屏幕状态下的导航栏的收缩和放出
 function MiniBarOpenAndClose(){
     $('.menu-btn').click(function(){
@@ -81,9 +75,6 @@ function MiniBarOpenAndClose(){
     }
     console.log(1212132132)
 }
-
-
-
 
 $(window).resize(function () {
     var screenWidth = $(window).width();//浏览器当前窗口可视区域宽度
@@ -171,6 +162,21 @@ function changeWindowWidth(){
         'bottom': 0,
         'padding': '0 0 20px 30px'
     })
+
+
+    //主页的改变
+    $('.bigLogo').css('text-align','center')
+    $('.Rtext>h1').css({
+        'font-size':'2em',
+        'line-height':'37px'
+    })
+    $('.Rtext').css('width','100%')
+    $('.Llogo>img').css({
+        'width':'100%',
+        'height':'100%',
+        'margin-right':'0'
+    })
+    $('.LeftNavList').css('display','block')
 }
 //屏幕小于1300px的变化
 function reductionContent(){
@@ -207,7 +213,7 @@ function reductionContent(){
         'padding': '0 60px 30px'
     })
     $('.content').css({
-        'padding': '35px 0 0 50px',
+        'padding': '80px 0 0 50px',
         'margin-left': '290px'
     })
     //content的改变
